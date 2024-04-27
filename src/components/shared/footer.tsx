@@ -74,7 +74,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex h-20 w-full items-center justify-center">
-        <p className="text-white">Copyright ©2023 All Rights Reserved</p>
+        <p className="text-white">Copyright ©2024 All Rights Reserved</p>
       </div>
     </footer>
   );

@@ -12,7 +12,9 @@ export default function Navbar() {
           info@cordialhealthpc.com
         </div>
         <div className="flex flex-1 items-center justify-center">
-          <Button size={"lg"}>Schedule an Appointment</Button>
+          <Link href="/contact-us">
+            <Button className="h-12">Schedule an Appointment</Button>
+          </Link>
         </div>
         <div className="flex flex-1 items-center justify-center text-white">
           347-66PSYCH (77924)
@@ -56,8 +58,8 @@ export default function Navbar() {
             </li>
           </Link>
         </ul>
-        <i className="flex mx-2 h-20 items-center md:hidden">
-          <Menu/>
+        <i className="mx-2 flex h-20 items-center md:hidden">
+          <Menu />
         </i>
       </div>
       <Separator className="bg-primary_blue" />
