@@ -1,37 +1,42 @@
-import Link from "next/link";
+import Image from "next/image";
+
+
+
+import { Button } from "@/components/ui/button";
+import { HeroCarousel } from "@/components/shared/carousel";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
+    <main className="h-auto w-full">
+      <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
+        <Image
+          src={"/hold-hands.jpg"}
+          fill
+          alt="hold-hands"
+          className="object-cover"
+        />
+        <div className="bg-primary_blue/30 absolute z-10 h-full w-full"></div>
+        <h1 className="z-20 text-6xl font-black text-white">Home</h1>
+      </section>
+      <section className="bg-primary_blue flex h-auto w-full flex-col text-white md:h-[35rem] md:flex-row-reverse">
+        <HeroCarousel />
+        <div className="grid w-full h-[20rem] md:h-[35rem] p-4">
+          <h1 className="text-3xl font-black md:text-6xl">
+            Welcome to <br /> Cordial Health
+          </h1>
+          <h2 className="text-md font-bold md:text-3xl">
+            Creating a Revolution in Mental Healthcare
+          </h2>
+          <p className="text-sm tracking-wider md:text-base">
+            At Cordial Health, we lead the forefront in offering exceptional
+            general psychiatry and medication management services across New
+            York. Our expert team of psychiatrists is passionately committed to
+            enhancing the mental well-being of individuals across all age groups
+            and stages of life.
+          </p>
+          <Button className="h-12 w-1/2">Learn More</Button>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
