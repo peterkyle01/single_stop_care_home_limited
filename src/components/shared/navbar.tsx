@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
+import Menu from "./menu";
 
 export default function Navbar() {
   return (
@@ -25,10 +26,14 @@ export default function Navbar() {
         </div>
         <ul className="text-md hidden flex-1 items-center justify-evenly md:flex">
           <Link href={"/"}>
-            <li className="text-md hover:text-pm_blue font-bold hover:text-primary">Home</li>
+            <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
+              Home
+            </li>
           </Link>
           <Link href={"/about-us"}>
-            <li className="text-md hover:text-pm_blue font-bold hover:text-primary">About Us</li>
+            <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
+              About Us
+            </li>
           </Link>
           <Link href={"/psychiatry-services"}>
             <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
@@ -41,12 +46,19 @@ export default function Navbar() {
             </li>
           </Link>
           <Link href={"/faqs"}>
-            <li className="text-md hover:text-pm_blue font-bold hover:text-primary">FAQs</li>
+            <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
+              FAQs
+            </li>
           </Link>
           <Link href={"/contact-us"}>
-            <li className="text-md hover:text-pm_blue font-bold hover:text-primary">Contact Us</li>
+            <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
+              Contact Us
+            </li>
           </Link>
         </ul>
+        <i className="flex mx-2 h-20 items-center md:hidden">
+          <Menu/>
+        </i>
       </div>
       <Separator className="bg-primary_blue" />
     </nav>
