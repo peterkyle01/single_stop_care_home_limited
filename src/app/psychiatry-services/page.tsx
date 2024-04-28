@@ -57,7 +57,7 @@ export default function PsychiatryServicesPage() {
             <hr className="h-1 w-32 bg-primary" />
           </motion.div>
           <p>
-            At Cordial Health, we offer comprehensive psychiatry services to
+            At Stop Shop Care Home, we offer comprehensive psychiatry services to
             meet the diverse mental health needs of individuals throughout New
             York. Our experienced team of psychiatrists is committed to
             providing high-quality care and improving the well-being of our
