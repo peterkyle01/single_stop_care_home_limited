@@ -30,7 +30,7 @@ export default function Menu() {
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Link href={"/about"}>
+                <Link href={"/about-us"}>
                   <li className="text-md font-bold">About</li>
                 </Link>
               </SheetClose>
