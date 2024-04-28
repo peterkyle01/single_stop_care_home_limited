@@ -1,5 +1,6 @@
+"use client"
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { HeroCarousel } from "@/components/shared/carousel";
 import { FaHeartbeat, FaWheelchair } from "react-icons/fa";
@@ -7,6 +8,10 @@ import { IoIosTimer } from "react-icons/io";
 import Link from "next/link";
 
 export default function HomePage() {
+    const variants = {
+      hidden: { opacity: 0, x: "-100vw" },
+      visible: { opacity: 1, x: 0 },
+    };
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
@@ -16,12 +21,26 @@ export default function HomePage() {
           alt="hold-hands"
           className="object-cover"
         />
-        <div className="bg-primary_blue/30 absolute z-10 h-full w-full"></div>
-        <h1 className="z-20 text-6xl font-black text-white">Home</h1>
+        <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
+        <motion.h1
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          className="z-20 text-6xl font-black text-white"
+        >
+          Home
+        </motion.h1>
       </section>
-      <section className="bg-primary_blue flex h-auto w-full flex-col text-white md:h-[35rem] md:flex-row-reverse">
+      <section className="flex h-auto w-full flex-col bg-primary_blue text-white md:h-[35rem] md:flex-row-reverse">
         <HeroCarousel />
-        <div className="grid h-[20rem] w-full p-4 md:h-[35rem]">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          className="grid h-[20rem] w-full p-4 md:h-[35rem]"
+        >
           <h1 className="text-3xl font-black md:text-6xl">
             Welcome to <br /> Cordial Health
           </h1>
@@ -38,7 +57,7 @@ export default function HomePage() {
           <Link href="/about-us">
             <Button className="h-12 w-1/2">Learn More</Button>
           </Link>
-        </div>
+        </motion.div>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <div className="relative h-80 w-full p-4 md:h-full">
@@ -87,7 +106,7 @@ export default function HomePage() {
           <hr className="h-1 w-32 bg-primary" />
         </div>
         <div className="flex h-[30rem] w-full gap-2 p-2 md:h-[40rem] md:gap-6 md:p-6">
-          <div className="border-primary_blue shadow-primary_blue flex-1 border-2 shadow-md">
+          <div className="flex-1 border-2 border-primary_blue shadow-md shadow-primary_blue">
             <div className="relative h-1/2 w-full">
               <Image
                 src={"/hold-hands.jpg"}
@@ -109,7 +128,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="border-primary_blue shadow-primary_blue flex-1 border-2 shadow-md">
+          <div className="flex-1 border-2 border-primary_blue shadow-md shadow-primary_blue">
             <div className="relative h-1/2 w-full">
               <Image
                 src={"/hold-hands.jpg"}
@@ -193,7 +212,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="bg-primary_blue h-auto w-full p-4 text-white">
+      <section className="h-auto w-full bg-primary_blue p-4 text-white">
         <p className="my-3 text-center text-3xl font-bold md:text-4xl">
           Turn to Telehealth
         </p>

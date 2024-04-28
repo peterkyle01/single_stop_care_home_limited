@@ -1,8 +1,15 @@
+"use client"
 import Image from "next/image";
 import { FaWheelchair,FaHeartbeat } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
+import { motion } from "framer-motion";
+
 
 export default function PsychiatryServicesPage() {
+   const variants = {
+     hidden: { opacity: 0, x: "-100vw" },
+     visible: { opacity: 1, x: 0 },
+   };
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
@@ -13,9 +20,14 @@ export default function PsychiatryServicesPage() {
           className="object-cover"
         />
         <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
-        <h1 className="z-20 text-6xl font-black text-white">
+         <motion.h1
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          className="z-20 text-6xl font-black text-white">
           Psychiatry Services
-        </h1>
+        </motion.h1>
       </section>
       <section className="h-[30rem] w-full p-10">
         <div className="flex h-full w-full flex-col items-center justify-center gap-3 b">

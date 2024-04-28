@@ -1,10 +1,16 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import { FaHeartbeat } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function ContactUsPage() {
+  const variants = {
+    hidden: { opacity: 0, x: "-100vw" },
+    visible: { opacity: 1, x: 0 },
+  };
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
@@ -14,11 +20,19 @@ export default function ContactUsPage() {
           alt="hold-hands"
           className="object-cover"
         />
-        <div className="bg-primary_blue/30 absolute z-10 h-full w-full"></div>
-        <h1 className="z-20 text-6xl font-black text-white">Contact Us</h1>
+        <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
+        <motion.h1
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          className="z-20 text-6xl font-black text-white"
+        >
+          Contact Us
+        </motion.h1>
       </section>
-      <section className="flex h-[45rem] w-full">
-        <div className="h-full w-1/4 p-4">
+      <section className="flex h-auto w-full flex-col md:h-[45rem] md:flex-row">
+        <div className="h-full w-full p-4 md:w-1/4">
           <h1 className="text-4xl font-bold">Contact Us</h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
             <hr className="h-1 w-32 bg-primary" />
@@ -47,12 +61,12 @@ export default function ContactUsPage() {
             to hearing from you and providing the support you need.
           </p>
         </div>
-        <div className="grid h-full w-3/4 gap-3 p-4">
+        <div className="grid h-full w-full gap-3 p-4 md:w-3/4">
           <p className="text-center text-lg font-bold">
             Thank you for considering our psychiatry services. We look forward
             to hearing from you and providing the support you need.
           </p>
-          <div className="shadow-primary_blue grow px-10">
+          <div className="grow px-10 shadow-primary_blue">
             <div className="grid gap-4">
               <div className="grid gap-2">
                 <Label htmlFor="email">First Name:</Label>

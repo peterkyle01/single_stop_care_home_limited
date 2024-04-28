@@ -1,7 +1,14 @@
+"use client"
 import Image from "next/image";
 import { FaHeartbeat } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 
 export default function MentalHealthcareServicesPage() {
+   const variants = {
+     hidden: { opacity: 0, x: "-100vw" },
+     visible: { opacity: 1, x: 0 },
+   };
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
@@ -12,9 +19,14 @@ export default function MentalHealthcareServicesPage() {
           className="object-cover"
         />
         <div className="bg-primary_blue/30 absolute z-10 h-full w-full"></div>
-        <h1 className="z-20 text-6xl font-black text-white">
+         <motion.h1
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          className="z-20 text-6xl font-black text-white">
           Mental Healthcare Services
-        </h1>
+        </motion.h1>
       </section>
       <section className="h-auto w-full p-4">
         <p className="text-lg">Our Services</p>

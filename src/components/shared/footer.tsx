@@ -48,7 +48,7 @@ export default function Footer() {
           <p className="text-lg font-bold">Contact Info</p>
           <Separator className="w-1/2" />
           <div className="h-auto w-full">
-            <p className="text-sm">970 N Broadway STE 201, Yonkers, NY 10701</p>
+            <p className="text-sm">75 WHITECHAPEL ROAD, LONDON ENGLAND</p>
             <p className="text-sm">info@cordialhealthpc.com</p>
             <p className="text-sm"> 347-66PSYCH (77924)</p>
           </div>

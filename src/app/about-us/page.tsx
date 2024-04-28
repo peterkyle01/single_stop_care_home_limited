@@ -1,8 +1,15 @@
+"use client"
 import Image from "next/image";
 import { FaHeartbeat, FaWheelchair } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
+import { motion } from "framer-motion";
+
 
 export default function AboutPage() {
+   const variants = {
+     hidden: { opacity: 0, x: "-100vw" },
+     visible: { opacity: 1, x: 0 },
+   };
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
@@ -13,7 +20,13 @@ export default function AboutPage() {
           className="object-cover"
         />
         <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
-        <h1 className="z-20 text-6xl font-black text-white">About</h1>
+
+        <motion.h1
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          transition={{ duration: 0.5 }}
+          className="z-20 text-6xl font-black text-white">About</motion.h1>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <div className="relative h-80 w-full p-4 md:h-full">
