@@ -16,15 +16,17 @@ export default function Navbar() {
         >
           <MdOutlineMailOutline className="mr-2" /> singlestropcarehome.co.uk
         </Link>
-
         <div className="flex flex-1 items-center justify-center">
           <Link href="/contact-us">
             <Button className="my-2 md:h-12">Schedule an Appointment</Button>
           </Link>
         </div>
-        <div className="flex flex-1 items-center justify-center text-white">
+        <Link
+          href={"tel:469-36PHYZI (77924)"}
+          className="flex flex-1 items-center justify-center text-white"
+        >
           <FaPhone className="mr-3" /> 469-36PHYZI (77924)
-        </div>
+        </Link>
       </div>
       <div className="flex h-20 w-full bg-white">
         <div className="flex flex-1 items-center justify-center">

@@ -23,7 +23,7 @@ export default function HomePage() {
   };
   return (
     <main className="h-auto w-full">
-      <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
+      <section className="relative flex h-60 md:h-80 w-full items-center justify-center bg-red-700">
         <Image
           src={"/hold-hands.jpg"}
           fill
@@ -48,17 +48,17 @@ export default function HomePage() {
           animate="visible"
           variants={variants}
           transition={{ duration: 0.5 }}
-          className="grid h-[20rem] w-full p-4 md:h-[35rem]"
+          className="grid h-[25rem] w-full p-4 md:h-[35rem]"
         >
-          <h1 className="text-3xl font-black md:text-6xl">
+          <h1 className="text-4xl font-black md:text-6xl">
             Welcome to <br /> Single Stop Care Home
           </h1>
-          <h2 className="text-md font-bold md:text-3xl">
+          <h2 className="text-lg font-bold md:text-3xl">
             Creating a Revolution in Parental Healthcare
           </h2>
           <p className="text-sm tracking-wider md:text-base">
             At Single Stop Care Home, we lead the forefront in offering
-            exceptional general psychiatry and medication management services
+            exceptional general home care
             across UK . Our expert team of psychiatrists is passionately
             committed to enhancing the mental well-being of individuals across
             all age groups and stages of life.
@@ -132,7 +132,7 @@ export default function HomePage() {
           <FaHeartbeat className="text-4xl" color="0369a1" />
           <hr className="h-1 w-32 bg-primary" />
         </div>
-        <div className="flex h-[30rem] w-full gap-2 p-2 md:h-[40rem] md:gap-6 md:p-6">
+        <div className="flex h-[30rem] w-full gap-1 p-1 md:h-[40rem] md:gap-6 md:p-6">
           <motion.div
             ref={ref2}
             variants={leftAnimation}
@@ -148,7 +148,7 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <div className="grid h-1/2 w-full p-2">
+            <div className="grid h-1/2 w-full p-1">
               <h1 className="font-bold md:my-2 md:text-3xl">
                 Fostering Wellness with General Psychiatry
               </h1>
@@ -176,7 +176,7 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <div className="grid h-1/2 w-full p-2">
+            <div className="grid h-1/2 w-full p-1">
               <h1 className="font-bold md:my-2 md:text-3xl">
                 Medication Management for Good Health
               </h1>
@@ -222,10 +222,10 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-[30rem] w-full place-content-center gap-4 p-2">
-              <h1 className="font-bold md:my-2 md:text-3xl">
-                On-Site Nursing Home Psychiatry{" "}
+              <h1 className="text-3xl font-bold md:my-2">
+                On-Site Nursing Home Psychiatry
               </h1>
-              <p className="text-xs text-neutral-600 md:text-base">
+              <p className="text-neutral-600">
                 Our on-site nursing home psychiatry service stems from our
                 commitment to providing comprehensive and personalized mental
                 healthcare. Our expert psychiatrists collaborate closely with
@@ -251,10 +251,10 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-[30rem] w-full place-content-center gap-4 p-2">
-              <h1 className="font-bold md:my-2 md:text-3xl">
+              <h1 className="text-3xl font-bold md:my-2">
                 Telehealth Psychiatry Services
               </h1>
-              <p className="text-xs text-neutral-600 md:text-base">
+              <p className="text-neutral-600">
                 Our telehealth psychiatry services demonstrate our dedication to
                 making mental healthcare accessible, confidential, and
                 convenient. Utilizing cutting-edge technology, our expert
@@ -303,7 +303,7 @@ export default function HomePage() {
         </motion.p>
         <div className="flex h-auto w-full flex-col gap-4 p-2 md:h-80 md:flex-row">
           <div className="grid h-full w-full bg-white p-2">
-            <i className="text-6xl text-primary md:text-8xl">
+            <i className="place-self-center text-6xl text-primary md:text-8xl">
               <IoIosTimer />
             </i>
             <h1 className="text-3xl font-bold text-black">
@@ -316,7 +316,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid h-full w-full bg-white p-2">
-            <i className="text-6xl text-primary md:text-8xl">
+            <i className="place-self-center text-6xl text-primary md:text-8xl">
               <IoIosTimer />
             </i>
             <h1 className="text-3xl font-bold text-black">
@@ -329,7 +329,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid h-full w-full bg-white p-2">
-            <i className="text-6xl text-primary md:text-8xl">
+            <i className="place-self-center text-6xl text-primary md:text-8xl">
               <FaWheelchair />
             </i>
             <h1 className="text-3xl font-bold text-black">Accessible Care</h1>
