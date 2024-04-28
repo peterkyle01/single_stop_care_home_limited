@@ -58,7 +58,7 @@ export default function HomePage() {
           </h2>
           <p className="text-sm tracking-wider md:text-base">
             At Single Stop Care Home, we lead the forefront in offering
-            exceptional general home care across UK . Our expert team of
+            exceptional general home care across UK. Our expert team of
             psychiatrists is passionately committed to enhancing the mental
             well-being of individuals across all age groups and stages of life.
           </p>
@@ -147,11 +147,11 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <div className="grid h-1/2 w-full p-1">
-              <h1 className="font-bold md:my-2 md:text-3xl">
+            <div className="grid h-1/2 w-full p-1 bg-white">
+              <h1 className="font-bold md:my-2 md:text-3xl text-center">
                 Fostering Wellness with General Psychiatry
               </h1>
-              <p className="text-xs text-neutral-600 md:text-base">
+              <p className="text-xs text-neutral-600 md:text-xl text-center">
                 Our principal focus lies in delivering top-tier general
                 psychiatry services. Our experienced psychiatrists are adept at
                 diagnosing, treating, and managing various mental health
@@ -175,11 +175,11 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <div className="grid h-1/2 w-full p-1">
-              <h1 className="font-bold md:my-2 md:text-3xl">
+            <div className="grid h-1/2 w-full p-1 bg-white">
+              <h1 className="font-bold md:my-2 md:text-3xl text-center">
                 Medication Management for Good Health
               </h1>
-              <p className="text-xs text-neutral-600 md:text-base">
+              <p className="text-xs text-neutral-600 md:text-xl text-center">
                 Effective medication management is key to successful treatment
                 outcomes in psychiatry.We review your prescription regularly and
                 adjust dosages as necessary, reducing potential risks and

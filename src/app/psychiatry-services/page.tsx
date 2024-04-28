@@ -164,7 +164,7 @@ export default function PsychiatryServicesPage() {
         </div>
         <div className="flex h-auto w-full flex-col gap-4 p-2 md:h-80 md:flex-row">
           <div className="grid h-full w-full bg-white p-2">
-            <i className="text-6xl text-primary md:text-8xl">
+            <i className="text-6xl text-primary md:text-8xl place-self-center">
               <IoIosTimer />
             </i>
             <h1 className="text-3xl font-bold text-black">
@@ -177,7 +177,7 @@ export default function PsychiatryServicesPage() {
             </p>
           </div>
           <div className="grid h-full w-full bg-white p-2">
-            <i className="text-6xl text-primary md:text-8xl">
+            <i className="text-6xl text-primary md:text-8xl place-self-center">
               <IoIosTimer />
             </i>
             <h1 className="text-3xl font-bold text-black">
@@ -190,7 +190,7 @@ export default function PsychiatryServicesPage() {
             </p>
           </div>
           <div className="grid h-full w-full bg-white p-2">
-            <i className="text-6xl text-primary md:text-8xl">
+            <i className="text-6xl text-primary md:text-8xl place-self-center">
               <FaWheelchair />
             </i>
             <h1 className="text-3xl font-bold text-black">Accessible Care</h1>
