@@ -6,13 +6,13 @@ import { useInView } from "react-intersection-observer";
 import { dropAnimation, leftAnimation, rightAnimation } from "@/lib/utils";
 
 export default function AboutPage() {
-  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false });
-  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: false });
-  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: false });
-  const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: false });
-  const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: false });
-  const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: false });
-  const { ref: ref7, inView: inView7 } = useInView({ triggerOnce: false });
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
+  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
+  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: true });
+  const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: true });
+  const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: true });
+  const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: true });
+  const { ref: ref7, inView: inView7 } = useInView({ triggerOnce: true });
 
   const variants = {
     hidden: { opacity: 0, x: "-100vw" },

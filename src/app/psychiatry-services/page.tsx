@@ -7,9 +7,9 @@ import { useInView } from "react-intersection-observer";
 import { dropAnimation, leftAnimation, rightAnimation } from "@/lib/utils";
 
 export default function PsychiatryServicesPage() {
-  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false });
-  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: false });
-  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: false });
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
+  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
+  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: true });
   const variants = {
     hidden: { opacity: 0, x: "-100vw" },
     visible: { opacity: 1, x: 0 },

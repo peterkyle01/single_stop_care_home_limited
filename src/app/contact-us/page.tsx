@@ -9,7 +9,7 @@ import { useInView } from "react-intersection-observer";
 import { leftAnimation, rightAnimation } from "@/lib/utils";
 
 export default function ContactUsPage() {
-  const { ref, inView } = useInView({ triggerOnce: false });
+  const { ref, inView } = useInView({ triggerOnce: true });
   const variants = {
     hidden: { opacity: 0, x: "-100vw" },
     visible: { opacity: 1, x: 0 },
