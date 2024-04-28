@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -6,12 +6,21 @@ import { HeroCarousel } from "@/components/shared/carousel";
 import { FaHeartbeat, FaWheelchair } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
+import { dropAnimation, leftAnimation, rightAnimation } from "@/lib/utils";
 
 export default function HomePage() {
-    const variants = {
-      hidden: { opacity: 0, x: "-100vw" },
-      visible: { opacity: 1, x: 0 },
-    };
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false });
+  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: false });
+  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: false });
+  const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: false });
+  const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: false });
+  const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: false });
+
+  const variants = {
+    hidden: { opacity: 0, x: "-100vw" },
+    visible: { opacity: 1, x: 0 },
+  };
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
@@ -42,17 +51,17 @@ export default function HomePage() {
           className="grid h-[20rem] w-full p-4 md:h-[35rem]"
         >
           <h1 className="text-3xl font-black md:text-6xl">
-            Welcome to <br /> Cordial Health
+            Welcome to <br /> Single Stop Care Home
           </h1>
           <h2 className="text-md font-bold md:text-3xl">
-            Creating a Revolution in Mental Healthcare
+            Creating a Revolution in Parental Healthcare
           </h2>
           <p className="text-sm tracking-wider md:text-base">
-            At Cordial Health, we lead the forefront in offering exceptional
-            general psychiatry and medication management services across New
-            York. Our expert team of psychiatrists is passionately committed to
-            enhancing the mental well-being of individuals across all age groups
-            and stages of life.
+            At Single Stop Care Home, we lead the forefront in offering
+            exceptional general psychiatry and medication management services
+            across UK . Our expert team of psychiatrists is passionately
+            committed to enhancing the mental well-being of individuals across
+            all age groups and stages of life.
           </p>
           <Link href="/about-us">
             <Button className="h-12 w-1/2">Learn More</Button>
@@ -60,7 +69,13 @@ export default function HomePage() {
         </motion.div>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
-        <div className="relative h-80 w-full p-4 md:h-full">
+        <motion.div
+          ref={ref1}
+          variants={leftAnimation}
+          initial="hidden"
+          animate={inView1 ? "show" : "hidden"}
+          className="relative h-80 w-full p-4 md:h-full"
+        >
           <div className="relative h-full w-full">
             <Image
               src={"/hold-hands.jpg"}
@@ -69,10 +84,16 @@ export default function HomePage() {
               className="object-cover"
             />
           </div>
-        </div>
-        <div className="grid h-auto w-full p-4 md:h-full">
+        </motion.div>
+        <motion.div
+          ref={ref1}
+          variants={rightAnimation}
+          initial="hidden"
+          animate={inView1 ? "show" : "hidden"}
+          className="grid h-auto w-full p-4 md:h-full"
+        >
           <h1 className="text-4xl font-bold text-neutral-800 md:text-6xl">
-            Discover The <span className="text-primary_blue">Cordial</span>{" "}
+            Discover The <span className="text-primary_blue">Single Stop</span>{" "}
             Approach
           </h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
@@ -83,9 +104,9 @@ export default function HomePage() {
 
           <p className="my-2 text-neutral-600">
             Navigating the labyrinth of mental health can be daunting. But, with
-            Cordial Health, you can expect care that&apos;s not only
-            professional but also cordial — a warm and friendly approach that
-            goes above and beyond traditional clinical interactions.
+            Single Stop Care Home, you can expect care that&apos;s not only
+            professional but also peace — a warm and friendly approach that goes
+            above and beyond traditional clinical interactions.
           </p>
           <p className="text-neutral-600">
             We recognize that mental healthcare is a deeply personal experience,
@@ -94,19 +115,31 @@ export default function HomePage() {
             patients by creating a comfortable environment where they can feel
             at ease discussing their concerns.
           </p>
-        </div>
+        </motion.div>
       </section>
       <section className="h-auto w-full bg-gray-200 py-4">
-        <h1 className="my-4 text-center text-4xl font-bold md:text-6xl">
+        <motion.h1
+          ref={ref4}
+          variants={dropAnimation}
+          initial="hidden"
+          animate={inView4 ? "show" : "hidden"}
+          className="my-4 text-center text-4xl font-bold md:text-6xl"
+        >
           Main Services
-        </h1>
+        </motion.h1>
         <div className="flex h-20 w-full items-center justify-center gap-5">
           <hr className="h-1 w-32 bg-primary" />
           <FaHeartbeat className="text-4xl" color="0369a1" />
           <hr className="h-1 w-32 bg-primary" />
         </div>
         <div className="flex h-[30rem] w-full gap-2 p-2 md:h-[40rem] md:gap-6 md:p-6">
-          <div className="flex-1 border-2 border-primary_blue shadow-md shadow-primary_blue">
+          <motion.div
+            ref={ref2}
+            variants={leftAnimation}
+            initial="hidden"
+            animate={inView2 ? "show" : "hidden"}
+            className="flex-1 border-2 border-primary_blue shadow-md shadow-primary_blue"
+          >
             <div className="relative h-1/2 w-full">
               <Image
                 src={"/hold-hands.jpg"}
@@ -127,8 +160,14 @@ export default function HomePage() {
                 specific needs.
               </p>
             </div>
-          </div>
-          <div className="flex-1 border-2 border-primary_blue shadow-md shadow-primary_blue">
+          </motion.div>
+          <motion.div
+            ref={ref2}
+            variants={rightAnimation}
+            initial="hidden"
+            animate={inView2 ? "show" : "hidden"}
+            className="flex-1 border-2 border-primary_blue shadow-md shadow-primary_blue"
+          >
             <div className="relative h-1/2 w-full">
               <Image
                 src={"/hold-hands.jpg"}
@@ -139,7 +178,7 @@ export default function HomePage() {
             </div>
             <div className="grid h-1/2 w-full p-2">
               <h1 className="font-bold md:my-2 md:text-3xl">
-                Medication Management for Mental Health
+                Medication Management for Good Health
               </h1>
               <p className="text-xs text-neutral-600 md:text-base">
                 Effective medication management is key to successful treatment
@@ -148,20 +187,32 @@ export default function HomePage() {
                 maximizing benefits to your mental well-being.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="h-auto w-full p-4">
-        <h1 className="text-center text-4xl font-bold md:text-6xl">
+        <motion.h1
+          ref={ref5}
+          variants={dropAnimation}
+          initial="hidden"
+          animate={inView5 ? "show" : "hidden"}
+          className="text-center text-4xl font-bold md:text-6xl"
+        >
           Additional Services
-        </h1>
+        </motion.h1>
         <div className="flex h-20 w-full items-center justify-center gap-5">
           <hr className="h-1 w-32 bg-primary" />
           <FaHeartbeat className="text-4xl" color="0369a1" />
           <hr className="h-1 w-32 bg-primary" />
         </div>
         <div className="flex h-auto w-full flex-col md:flex-row md:gap-8">
-          <div className="flex h-[35rem] w-full flex-col">
+          <motion.div
+            ref={ref3}
+            variants={leftAnimation}
+            initial="hidden"
+            animate={inView3 ? "show" : "hidden"}
+            className="flex h-[35rem] w-full flex-col"
+          >
             <div className="relative h-full w-full">
               <Image
                 src={"/hold-hands.jpg"}
@@ -183,8 +234,14 @@ export default function HomePage() {
                 medication management, and therapeutic sessions.
               </p>
             </div>
-          </div>
-          <div className="flex h-[35rem] w-full flex-col">
+          </motion.div>
+          <motion.div
+            ref={ref3}
+            variants={rightAnimation}
+            initial="hidden"
+            animate={inView3 ? "show" : "hidden"}
+            className="flex h-[35rem] w-full flex-col"
+          >
             <div className="relative h-full w-full">
               <Image
                 src={"/hold-hands.jpg"}
@@ -209,22 +266,41 @@ export default function HomePage() {
                 conducted in a secure, online environment.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="h-auto w-full bg-primary_blue p-4 text-white">
-        <p className="my-3 text-center text-3xl font-bold md:text-4xl">
-          Turn to Telehealth
-        </p>
-        <h1 className="my-3 text-center text-4xl font-bold md:text-6xl">
-          The Future of Healthcare
-        </h1>
-        <p className="my-3 text-center text-xl font-bold">
-          At Cordial Health, we&apos;ve embraced this innovative healthcare
+        <motion.p
+          ref={ref6}
+          variants={dropAnimation}
+          initial="hidden"
+          animate={inView6 ? "show" : "hidden"}
+          className="my-3 text-center text-3xl font-bold md:text-4xl"
+        >
+          Turn to Single Stop
+        </motion.p>
+        <motion.h1
+          ref={ref6}
+          variants={dropAnimation}
+          initial="hidden"
+          animate={inView6 ? "show" : "hidden"}
+          className="my-3 text-center text-4xl font-bold md:text-6xl"
+        >
+          The Future of Care Home
+        </motion.h1>
+        <motion.p
+          ref={ref6}
+          variants={dropAnimation}
+          initial="hidden"
+          animate={inView6 ? "show" : "hidden"}
+          className="my-3 text-center text-xl font-bold"
+        >
+          At Single Stop Care Home we&apos;ve embraced this innovative
+          healthcare
           <br />
           approach to deliver convenient, flexible, and accessible psychiatric
           care.
-        </p>
+        </motion.p>
         <div className="flex h-auto w-full flex-col gap-4 p-2 md:h-80 md:flex-row">
           <div className="grid h-full w-full bg-white p-2">
             <i className="text-6xl text-primary md:text-8xl">

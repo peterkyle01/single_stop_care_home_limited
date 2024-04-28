@@ -13,7 +13,7 @@ export default function Navbar() {
     <nav className="fixed top-0 z-50 h-auto w-full md:h-40">
       <div className="bg-primary_blue flex h-auto w-full flex-col md:h-20 md:flex-row">
         <div className="flex flex-1 items-center justify-center text-white">
-          <MdOutlineMailOutline className="mr-2"/> info@cordialhealthpc.com
+          <MdOutlineMailOutline className="mr-2"/> singlestropcarehome.co.uk
         </div>
         <div className="flex flex-1 items-center justify-center">
           <Link href="/contact-us">
@@ -21,7 +21,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-center text-white">
-        <FaPhone className="mr-3"/> 347-66PSYCH (77924)
+        <FaPhone className="mr-3"/> 469-36PHYZI (77924)
         </div>
       </div>
       <div className="flex h-20 w-full bg-white">

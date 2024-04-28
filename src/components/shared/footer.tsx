@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className=" bg-secondary_blue h-auto w-full">
+    <footer className=" h-auto w-full bg-secondary_blue">
       <div className="flex h-auto w-full flex-col text-white md:h-72 md:flex-row">
         <div className="grid h-72 w-full p-4">
           <p className="text-lg font-bold">Quick Links</p>
@@ -48,9 +48,9 @@ export default function Footer() {
           <p className="text-lg font-bold">Contact Info</p>
           <Separator className="w-1/2" />
           <div className="h-auto w-full">
-            <p className="text-sm">75 WHITECHAPEL ROAD, LONDON ENGLAND</p>
-            <p className="text-sm">info@cordialhealthpc.com</p>
-            <p className="text-sm"> 347-66PSYCH (77924)</p>
+            <p className="text-sm">Single Top Carehome Ltd</p>
+            <p className="text-sm">75 White Chaple Road</p>
+            <p className="text-sm">London, E1 1DU</p>
           </div>
           <div className="flex h-auto w-full gap-3">
             <FaFacebook size={30} />
@@ -64,7 +64,7 @@ export default function Footer() {
         </div>
         <div className="h-72 w-full p-2">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.830866357652!2d36.778592273441035!3d-1.27476009871311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f19fd9b65c0ef%3A0xbac0db1b9cbf73e!2sArchives%20Tower%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1714247392724!5m2!1sen!2ske"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.717534416318!2d-0.06543062432819607!3d51.51839797181585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ccc5d9a52b5%3A0x1d9e8daa94bf42f9!2sWhitechapel%20Rd%2C%20London%2C%20UK!5e0!3m2!1sen!2ske!4v1714268387931!5m2!1sen!2ske"
             width="100%"
             height="100%"
             allowFullScreen
