@@ -53,10 +53,10 @@ export default function ContactUsPage() {
             any inquiries or to schedule an appointment.
           </p>
           <h1 className="my-3 text-2xl">Contact Information:</h1>
-          <p>Phone: 347-66PSYCH (77924)</p>
+          <p>Phone: 469-36PHYZI (77924)</p>
           <p>Email: singlestropcarehome.co.uk</p>
           <h1 className="my-3 text-2xl">Office Address:</h1>
-          <p>970 N Broadway STE 201, Yonkers, NY 10701</p>
+          <p>Single Top Carehome Ltd 75 White Chaple Road</p>
           <h1 className="my-3 text-2xl">Office Address:</h1>
           <p>
             Monday-Friday: 10AM - 10PM
