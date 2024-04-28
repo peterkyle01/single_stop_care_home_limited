@@ -6,22 +6,24 @@ import Menu from "./menu";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 
-
-
 export default function Navbar() {
   return (
     <nav className="fixed top-0 z-50 h-auto w-full md:h-40">
-      <div className="bg-primary_blue flex h-auto w-full flex-col md:h-20 md:flex-row">
-        <div className="flex flex-1 items-center justify-center text-white">
-          <MdOutlineMailOutline className="mr-2"/> singlestropcarehome.co.uk
-        </div>
+      <div className="flex h-auto w-full flex-col bg-primary_blue md:h-20 md:flex-row">
+        <Link
+          className="flex flex-1 items-center justify-center text-white"
+          href={"mailto:singlestropcarehome.co.uk"}
+        >
+          <MdOutlineMailOutline className="mr-2" /> singlestropcarehome.co.uk
+        </Link>
+
         <div className="flex flex-1 items-center justify-center">
           <Link href="/contact-us">
-            <Button className="h-12">Schedule an Appointment</Button>
+            <Button className="my-2 md:h-12">Schedule an Appointment</Button>
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-center text-white">
-        <FaPhone className="mr-3"/> 469-36PHYZI (77924)
+          <FaPhone className="mr-3" /> 469-36PHYZI (77924)
         </div>
       </div>
       <div className="flex h-20 w-full bg-white">
