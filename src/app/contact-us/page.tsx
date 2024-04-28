@@ -5,8 +5,11 @@ import { Label } from "@/components/ui/label";
 import Image from "next/image";
 import { FaHeartbeat } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { leftAnimation, rightAnimation } from "@/lib/utils";
 
 export default function ContactUsPage() {
+  const { ref, inView } = useInView({ triggerOnce: false });
   const variants = {
     hidden: { opacity: 0, x: "-100vw" },
     visible: { opacity: 1, x: 0 },
@@ -32,7 +35,13 @@ export default function ContactUsPage() {
         </motion.h1>
       </section>
       <section className="flex h-auto w-full flex-col md:h-[45rem] md:flex-row">
-        <div className="h-full w-full p-4 md:w-1/4">
+        <motion.div
+          ref={ref}
+          variants={leftAnimation}
+          initial="hidden"
+          animate={inView ? "show" : "hidden"}
+          className="h-full w-full p-4 md:w-1/4"
+        >
           <h1 className="text-4xl font-bold">Contact Us</h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
             <hr className="h-1 w-32 bg-primary" />
@@ -60,8 +69,14 @@ export default function ContactUsPage() {
             Thank you for considering our psychiatry services. We look forward
             to hearing from you and providing the support you need.
           </p>
-        </div>
-        <div className="grid h-full w-full gap-3 p-4 md:w-3/4">
+        </motion.div>
+        <motion.div
+          ref={ref}
+          variants={rightAnimation}
+          initial="hidden"
+          animate={inView ? "show" : "hidden"}
+          className="grid h-full w-full gap-3 p-4 md:w-3/4"
+        >
           <p className="text-center text-lg font-bold">
             Thank you for considering our psychiatry services. We look forward
             to hearing from you and providing the support you need.
@@ -95,7 +110,7 @@ export default function ContactUsPage() {
               </Button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </main>
   );

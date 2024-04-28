@@ -24,20 +24,20 @@ export default function Footer() {
             <Link href={"/about"}>
               <li className="text-md hover:text-pm_blue font-bold">About Us</li>
             </Link>
-            <Link href={"/about"}>
+            <Link href={"/psychiatry-services"}>
               <li className="text-md hover:text-pm_blue font-bold">
                 Psychiatry Services
               </li>
             </Link>
-            <Link href={"/about"}>
+            <Link href={"/mental-healthcare-services"}>
               <li className="text-md hover:text-pm_blue font-bold">
                 Mental Healthcare Services
               </li>
             </Link>
-            <Link href={"/about"}>
+            <Link href={"/faqs"}>
               <li className="text-md hover:text-pm_blue font-bold">FAQs</li>
             </Link>
-            <Link href={"/about"}>
+            <Link href={"/contact-us"}>
               <li className="text-md hover:text-pm_blue font-bold">
                 Contact Us
               </li>

@@ -1,15 +1,19 @@
-"use client"
+"use client";
 import Image from "next/image";
-import { FaWheelchair,FaHeartbeat } from "react-icons/fa";
+import { FaWheelchair, FaHeartbeat } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
 import { motion } from "framer-motion";
-
+import { useInView } from "react-intersection-observer";
+import { dropAnimation, leftAnimation, rightAnimation } from "@/lib/utils";
 
 export default function PsychiatryServicesPage() {
-   const variants = {
-     hidden: { opacity: 0, x: "-100vw" },
-     visible: { opacity: 1, x: 0 },
-   };
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false });
+  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: false });
+  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: false });
+  const variants = {
+    hidden: { opacity: 0, x: "-100vw" },
+    visible: { opacity: 1, x: 0 },
+  };
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
@@ -20,25 +24,38 @@ export default function PsychiatryServicesPage() {
           className="object-cover"
         />
         <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
-         <motion.h1
+        <motion.h1
           initial="hidden"
           animate="visible"
           variants={variants}
           transition={{ duration: 0.5 }}
-          className="z-20 text-6xl font-black text-white">
+          className="z-20 text-6xl font-black text-white"
+        >
           Psychiatry Services
         </motion.h1>
       </section>
       <section className="h-[30rem] w-full p-10">
-        <div className="flex h-full w-full flex-col items-center justify-center gap-3 b">
-          <h1 className="text-4xl font-bold text-neutral-800 md:text-6xl">
+        <div className="b flex h-full w-full flex-col items-center justify-center gap-3">
+          <motion.h1
+            ref={ref1}
+            variants={dropAnimation}
+            initial="hidden"
+            animate={inView1 ? "show" : "hidden"}
+            className="text-4xl font-bold text-neutral-800 md:text-6xl"
+          >
             Our Services
-          </h1>
-          <div className="flex h-20 w-full items-center justify-center gap-5">
+          </motion.h1>
+          <motion.div
+            ref={ref1}
+            variants={dropAnimation}
+            initial="hidden"
+            animate={inView1 ? "show" : "hidden"}
+            className="flex h-20 w-full items-center justify-center gap-5"
+          >
             <hr className="h-1 w-32 bg-primary" />{" "}
             <FaHeartbeat className="text-4xl" color="0369a1" />
             <hr className="h-1 w-32 bg-primary" />
-          </div>
+          </motion.div>
           <p>
             At Cordial Health, we offer comprehensive psychiatry services to
             meet the diverse mental health needs of individuals throughout New
@@ -49,7 +66,13 @@ export default function PsychiatryServicesPage() {
         </div>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
-        <div className="relative h-80 w-full p-4 md:h-full">
+        <motion.div
+          ref={ref2}
+          variants={leftAnimation}
+          initial="hidden"
+          animate={inView2 ? "show" : "hidden"}
+          className="relative h-80 w-full p-4 md:h-full"
+        >
           <div className="relative h-full w-full">
             <Image
               src={"/hold-hands.jpg"}
@@ -58,8 +81,14 @@ export default function PsychiatryServicesPage() {
               className="object-cover"
             />
           </div>
-        </div>
-        <div className="grid h-auto w-full p-4 md:h-full">
+        </motion.div>
+        <motion.div
+          ref={ref2}
+          variants={rightAnimation}
+          initial="hidden"
+          animate={inView2 ? "show" : "hidden"}
+          className="grid h-auto w-full p-4 md:h-full"
+        >
           <h1 className="text-4xl font-bold text-neutral-800 md:text-6xl">
             Nursing Home Psychiatry{" "}
           </h1>
@@ -77,10 +106,16 @@ export default function PsychiatryServicesPage() {
             psychiatrists collaborate closely with nursing home staff to ensure
             integrated and holistic care for each individual.
           </p>
-        </div>
+        </motion.div>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
-        <div className="grid h-auto w-full p-4 md:h-full">
+        <motion.div
+          ref={ref3}
+          variants={leftAnimation}
+          initial="hidden"
+          animate={inView3 ? "show" : "hidden"}
+          className="grid h-auto w-full p-4 md:h-full"
+        >
           <h1 className="text-4xl font-bold text-neutral-800 md:text-6xl">
             Telehealth Psychiatry{" "}
           </h1>
@@ -100,8 +135,14 @@ export default function PsychiatryServicesPage() {
             ensures that individuals across New York can receive the care they
             need, regardless of their location.
           </p>
-        </div>
-        <div className="relative h-80 w-full p-4 md:h-full">
+        </motion.div>
+        <motion.div
+          ref={ref3}
+          variants={rightAnimation}
+          initial="hidden"
+          animate={inView3 ? "show" : "hidden"}
+          className="relative h-80 w-full p-4 md:h-full"
+        >
           <div className="relative h-full w-full">
             <Image
               src={"/hold-hands.jpg"}
@@ -110,7 +151,7 @@ export default function PsychiatryServicesPage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </motion.div>
       </section>
       <section className="h-auto w-full bg-primary_blue p-4 text-white">
         <p className="my-3 text-center text-3xl font-bold md:text-4xl">

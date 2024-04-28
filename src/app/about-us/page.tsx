@@ -1,17 +1,26 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { FaHeartbeat } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import { useInView } from "react-intersection-observer";
+import { dropAnimation, leftAnimation, rightAnimation } from "@/lib/utils";
 
 export default function AboutPage() {
-   const variants = {
-     hidden: { opacity: 0, x: "-100vw" },
-     visible: { opacity: 1, x: 0 },
-   };
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false });
+  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: false });
+  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: false });
+  const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: false });
+  const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: false });
+  const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: false });
+  const { ref: ref7, inView: inView7 } = useInView({ triggerOnce: false });
+
+  const variants = {
+    hidden: { opacity: 0, x: "-100vw" },
+    visible: { opacity: 1, x: 0 },
+  };
   return (
     <main className="h-auto w-full">
-      <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
+      <section className="relative flex h-80 w-full items-center justify-center">
         <Image
           src={"/hold-hands.jpg"}
           fill
@@ -32,16 +41,28 @@ export default function AboutPage() {
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <div className="relative h-80 w-full p-4 md:h-full">
-          <div className="relative h-full w-full">
+          <motion.div
+            ref={ref1}
+            variants={leftAnimation}
+            initial="hidden"
+            animate={inView1 ? "show" : "hidden"}
+            className="relative h-full w-full"
+          >
             <Image
               src={"/hold-hands.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"
             />
-          </div>
+          </motion.div>
         </div>
-        <div className="grid h-auto w-full p-4 md:h-full">
+        <motion.div
+          ref={ref1}
+          variants={rightAnimation}
+          initial="hidden"
+          animate={inView1 ? "show" : "hidden"}
+          className="grid h-auto w-full p-4 md:h-full"
+        >
           <p className="my-2 text-neutral-600">
             Single Stop Carehome Ltd is a leading domiciliary care company based
             in East part of London, UK. With a focus on providing high-quality
@@ -67,18 +88,30 @@ export default function AboutPage() {
             individuals with autism, fostering a supportive and understanding
             environment.
           </p>
-        </div>
+        </motion.div>
       </section>
       <section className="h-[35rem] w-full p-10">
         <div className="flex h-full w-full flex-col items-center justify-center gap-3 border-2 border-primary_blue p-4 shadow-md shadow-primary_blue">
-          <h1 className="text-4xl font-bold text-neutral-800 md:text-6xl">
+          <motion.h1
+            ref={ref2}
+            variants={dropAnimation}
+            initial="hidden"
+            animate={inView2 ? "show" : "hidden"}
+            className="text-4xl font-bold text-neutral-800 md:text-6xl"
+          >
             Our Approach
-          </h1>
-          <div className="flex h-20 w-full items-center justify-center gap-5">
+          </motion.h1>
+          <motion.div
+            ref={ref2}
+            variants={dropAnimation}
+            initial="hidden"
+            animate={inView2 ? "show" : "hidden"}
+            className="flex h-20 w-full items-center justify-center gap-5"
+          >
             <hr className="h-1 w-32 bg-primary" />{" "}
             <FaHeartbeat className="text-4xl" color="0369a1" />
             <hr className="h-1 w-32 bg-primary" />
-          </div>
+          </motion.div>
           <p>
             At Single Top Carehome Ltd, we believe in a holistic approach to
             care that prioritizes the physical, emotional, and social well-being
@@ -93,19 +126,36 @@ export default function AboutPage() {
       </section>
       <section className="h-[30rem] w-full p-10">
         <div className="b flex h-full w-full flex-col items-center justify-center gap-3">
-          <h1 className="text-4xl font-bold text-neutral-800 md:text-6xl">
+          <motion.h1
+            ref={ref3}
+            variants={dropAnimation}
+            initial="hidden"
+            animate={inView3 ? "show" : "hidden"}
+            className="text-4xl font-bold text-neutral-800 md:text-6xl"
+          >
             Why Single Stop Care Home?
-          </h1>
-          <p>
+          </motion.h1>
+          <motion.p
+            ref={ref3}
+            variants={dropAnimation}
+            initial="hidden"
+            animate={inView3 ? "show" : "hidden"}
+          >
             At Single Top Carehome Ltd, we offer a comprehensive range of
             services tailored to meet the diverse needs of our clients. Our
             services include:
-          </p>
-          <div className="flex h-20 w-full items-center justify-center gap-5">
+          </motion.p>
+          <motion.div
+            ref={ref3}
+            variants={dropAnimation}
+            initial="hidden"
+            animate={inView3 ? "show" : "hidden"}
+            className="flex h-20 w-full items-center justify-center gap-5"
+          >
             <hr className="h-1 w-32 bg-primary" />{" "}
             <FaHeartbeat className="text-4xl" color="0369a1" />
             <hr className="h-1 w-32 bg-primary" />
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="h-auto w-full bg-white p-4 text-white">
@@ -159,7 +209,13 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
-        <div className="relative h-80 w-full p-4 md:h-full">
+        <motion.div
+          ref={ref4}
+          variants={leftAnimation}
+          initial="hidden"
+          animate={inView4 ? "show" : "hidden"}
+          className="relative h-80 w-full p-4 md:h-full"
+        >
           <div className="relative h-full w-full">
             <Image
               src={"/hold-hands.jpg"}
@@ -168,8 +224,14 @@ export default function AboutPage() {
               className="object-cover"
             />
           </div>
-        </div>
-        <div className="grid h-auto w-full p-4 md:h-full">
+        </motion.div>
+        <motion.div
+          ref={ref4}
+          variants={rightAnimation}
+          initial="hidden"
+          animate={inView4 ? "show" : "hidden"}
+          className="grid h-auto w-full p-4 md:h-full"
+        >
           <h1 className="text-center text-4xl font-bold text-neutral-800 md:text-6xl">
             Our Mission
           </h1>
@@ -195,10 +257,16 @@ export default function AboutPage() {
             confidence of those we serve, and making a positive difference in
             the communities we are privileged to be a part of.
           </p>
-        </div>
+        </motion.div>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
-        <div className="grid h-auto w-full p-4 md:h-full">
+        <motion.div
+          ref={ref5}
+          variants={leftAnimation}
+          initial="hidden"
+          animate={inView5 ? "show" : "hidden"}
+          className="grid h-auto w-full p-4 md:h-full"
+        >
           <h1 className="text-center text-4xl font-bold text-neutral-800 md:text-6xl">
             Our Vision
           </h1>
@@ -220,20 +288,32 @@ export default function AboutPage() {
             pursuit of creating positive and lasting impacts on the lives of
             those we serve.
           </p>
-        </div>
+        </motion.div>
         <div className="relative h-80 w-full p-4 md:h-full">
-          <div className="relative h-full w-full">
+          <motion.div
+            ref={ref5}
+            variants={rightAnimation}
+            initial="hidden"
+            animate={inView5 ? "show" : "hidden"}
+            className="relative h-full w-full"
+          >
             <Image
               src={"/hold-hands.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
-        <div className="relative h-80 w-full p-4 md:h-full">
+        <motion.div
+          ref={ref6}
+          variants={leftAnimation}
+          initial="hidden"
+          animate={inView6 ? "show" : "hidden"}
+          className="relative h-80 w-full p-4 md:h-full"
+        >
           <div className="relative h-full w-full">
             <Image
               src={"/hold-hands.jpg"}
@@ -242,8 +322,14 @@ export default function AboutPage() {
               className="object-cover"
             />
           </div>
-        </div>
-        <div className="grid h-auto w-full p-4 md:h-full">
+        </motion.div>
+        <motion.div
+          ref={ref6}
+          variants={rightAnimation}
+          initial="hidden"
+          animate={inView6 ? "show" : "hidden"}
+          className="grid h-auto w-full p-4 md:h-full"
+        >
           <h1 className="text-center text-4xl font-bold text-neutral-800 md:text-6xl">
             Our Objectives
           </h1>
@@ -272,10 +358,16 @@ export default function AboutPage() {
             to resources, support services, and coordinated care for service
             users and their families.
           </p>
-        </div>
+        </motion.div>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
-        <div className="grid h-auto w-full p-4 md:h-full">
+        <motion.div
+          ref={ref7}
+          variants={leftAnimation}
+          initial="hidden"
+          animate={inView7 ? "show" : "hidden"}
+          className="grid h-auto w-full p-4 md:h-full"
+        >
           <h1 className="text-center text-4xl font-bold text-neutral-800 md:text-6xl">
             Our Values
           </h1>
@@ -288,16 +380,13 @@ export default function AboutPage() {
           <p className="my-2 text-neutral-600">
             • Compassion: We approach every interaction with empathy,
             understanding, and kindness, ensuring our service users feel valued,
-            respected, and supported.
-            • Excellence: We strive for excellence in
+            respected, and supported. • Excellence: We strive for excellence in
             all aspects of our work, continuously seeking opportunities for
             improvement and innovation to deliver the highest quality care
-            services.
-            • Integrity: We uphold the highest ethical standards in
+            services. • Integrity: We uphold the highest ethical standards in
             our conduct, maintaining transparency, honesty, and accountability
             in all our interactions with service users, their families, and our
-            community partners.
-            • Empowerment: We empower our service users to
+            community partners. • Empowerment: We empower our service users to
             actively participate in their care decisions, promoting autonomy,
             independence, and self-determination in all aspects of their lives.
             • Continuous Learning: We embrace a culture of lifelong learning and
@@ -305,8 +394,14 @@ export default function AboutPage() {
             our staff to ensure they are equipped with the knowledge, skills,
             and resources to provide exceptional care.
           </p>
-        </div>
-        <div className="relative h-80 w-full p-4 md:h-full">
+        </motion.div>
+        <motion.div
+          ref={ref7}
+          variants={rightAnimation}
+          initial="hidden"
+          animate={inView7 ? "show" : "hidden"}
+          className="relative h-80 w-full p-4 md:h-full"
+        >
           <div className="relative h-full w-full">
             <Image
               src={"/hold-hands.jpg"}
@@ -315,7 +410,7 @@ export default function AboutPage() {
               className="object-cover"
             />
           </div>
-        </div>
+        </motion.div>
       </section>
     </main>
   );
