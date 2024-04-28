@@ -3,13 +3,17 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import Menu from "./menu";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { FaPhone } from "react-icons/fa6";
+
+
 
 export default function Navbar() {
   return (
     <nav className="fixed top-0 z-50 h-auto w-full md:h-40">
       <div className="bg-primary_blue flex h-auto w-full flex-col md:h-20 md:flex-row">
         <div className="flex flex-1 items-center justify-center text-white">
-          info@cordialhealthpc.com
+          <MdOutlineMailOutline className="mr-2"/> info@cordialhealthpc.com
         </div>
         <div className="flex flex-1 items-center justify-center">
           <Link href="/contact-us">
@@ -17,7 +21,7 @@ export default function Navbar() {
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-center text-white">
-          347-66PSYCH (77924)
+        <FaPhone className="mr-3"/> 347-66PSYCH (77924)
         </div>
       </div>
       <div className="flex h-20 w-full bg-white">

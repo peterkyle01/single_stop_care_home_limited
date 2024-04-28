@@ -1,4 +1,8 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import Image from "next/image";
+import { FaHeartbeat } from "react-icons/fa";
 
 export default function ContactUsPage() {
   return (
@@ -13,15 +17,72 @@ export default function ContactUsPage() {
         <div className="bg-primary_blue/30 absolute z-10 h-full w-full"></div>
         <h1 className="z-20 text-6xl font-black text-white">Contact Us</h1>
       </section>
-      <section className="flex h-[35rem] w-full">
-        <div className="h-full w-1/4">
-          <h1>Contact Us</h1>
+      <section className="flex h-[45rem] w-full">
+        <div className="h-full w-1/4 p-4">
+          <h1 className="text-4xl font-bold">Contact Us</h1>
+          <div className="flex h-20 w-full items-center justify-center gap-5">
+            <hr className="h-1 w-32 bg-primary" />
+            <FaHeartbeat className="text-4xl" color="0369a1" />
+            <hr className="h-1 w-32 bg-primary" />
+          </div>
+          <p>
+            We are here to assist you. Please feel free to reach out to us for
+            any inquiries or to schedule an appointment.
+          </p>
+          <h1 className="my-3 text-2xl">Contact Information:</h1>
+          <p>Phone: 347-66PSYCH (77924)</p>
+          <p>Email: info@cordialhealthpc.com</p>
+          <h1 className="my-3 text-2xl">Office Address:</h1>
+          <p>970 N Broadway STE 201, Yonkers, NY 10701</p>
+          <h1 className="my-3 text-2xl">Office Address:</h1>
+          <p>
+            Monday-Friday: 10AM - 10PM
+            <br />
+            Saturday: 10AM - 10PM
+            <br />
+            Sunday: Closed
+          </p>
+          <p className="my-6">
+            Thank you for considering our psychiatry services. We look forward
+            to hearing from you and providing the support you need.
+          </p>
         </div>
-        <div className="h-full w-3/4">
-
+        <div className="grid h-full w-3/4 gap-3 p-4">
+          <p className="text-center text-lg font-bold">
+            Thank you for considering our psychiatry services. We look forward
+            to hearing from you and providing the support you need.
+          </p>
+          <div className="shadow-primary_blue grow px-10">
+            <div className="grid gap-4">
+              <div className="grid gap-2">
+                <Label htmlFor="email">First Name:</Label>
+                <Input id="email" type="email" required />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="email">Last Name:</Label>
+                <Input id="email" type="email" required />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="email">Email:</Label>
+                <Input id="email" type="email" required />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="email">Phone number:</Label>
+                <Input id="email" type="email" required />
+              </div>
+              <div className="grid gap-2">
+                <div className="flex items-center">
+                  <Label htmlFor="password">Message:</Label>
+                </div>
+                <Input id="password" type="password" required />
+              </div>
+              <Button type="submit" className="w-full">
+                Send
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
-      
     </main>
   );
 }
