@@ -147,11 +147,11 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <div className="grid h-1/2 w-full p-1 bg-white">
-              <h1 className="font-bold md:my-2 md:text-3xl text-center">
+            <div className="grid h-1/2 w-full bg-white p-1">
+              <h1 className="text-center font-bold md:my-2 md:text-3xl">
                 Fostering Wellness with General Psychiatry
               </h1>
-              <p className="text-xs text-neutral-600 md:text-xl text-center">
+              <p className="text-center text-xs text-neutral-600 md:text-xl">
                 Our principal focus lies in delivering top-tier general
                 psychiatry services. Our experienced psychiatrists are adept at
                 diagnosing, treating, and managing various mental health
@@ -175,11 +175,11 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <div className="grid h-1/2 w-full p-1 bg-white">
-              <h1 className="font-bold md:my-2 md:text-3xl text-center">
+            <div className="grid h-1/2 w-full bg-white p-1">
+              <h1 className="text-center font-bold md:my-2 md:text-3xl">
                 Medication Management for Good Health
               </h1>
-              <p className="text-xs text-neutral-600 md:text-xl text-center">
+              <p className="text-center text-xs text-neutral-600 md:text-xl">
                 Effective medication management is key to successful treatment
                 outcomes in psychiatry.We review your prescription regularly and
                 adjust dosages as necessary, reducing potential risks and
@@ -256,13 +256,10 @@ export default function HomePage() {
               <p className="text-neutral-600">
                 Our telehealth psychiatry services demonstrate our dedication to
                 making mental healthcare accessible, confidential, and
-                convenient. Utilizing cutting-edge technology, our expert
-                psychiatrists reach patients regardless of their geographical
-                location within New York, providing the same quality of care as
-                traditional face-to-face sessions. This service includes
-                detailed virtual evaluations, development of tailored treatment
-                plans, strategic medication management, and therapeutic sessions
-                conducted in a secure, online environment.
+                convenient. This service includes detailed virtual evaluations,
+                development of tailored treatment plans, strategic medication
+                management, and therapeutic sessions conducted in a secure,
+                online environment.
               </p>
             </div>
           </motion.div>

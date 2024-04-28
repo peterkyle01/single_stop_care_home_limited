@@ -21,7 +21,7 @@ export default function Footer() {
             <Link href={"/"}>
               <li className="text-md hover:text-pm_blue font-bold">Home</li>
             </Link>
-            <Link href={"/about"}>
+            <Link href={"/about-us"}>
               <li className="text-md hover:text-pm_blue font-bold">About Us</li>
             </Link>
             <Link href={"/psychiatry-services"}>
