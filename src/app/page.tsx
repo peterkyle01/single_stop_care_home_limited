@@ -23,7 +23,7 @@ export default function HomePage() {
   };
   return (
     <main className="h-auto w-full">
-      <section className="relative flex h-60 md:h-80 w-full items-center justify-center bg-red-700">
+      <section className="relative flex h-60 w-full items-center justify-center bg-red-700 md:h-80">
         <Image
           src={"/hold-hands.jpg"}
           fill
@@ -58,10 +58,9 @@ export default function HomePage() {
           </h2>
           <p className="text-sm tracking-wider md:text-base">
             At Single Stop Care Home, we lead the forefront in offering
-            exceptional general home care
-            across UK . Our expert team of psychiatrists is passionately
-            committed to enhancing the mental well-being of individuals across
-            all age groups and stages of life.
+            exceptional general home care across UK . Our expert team of
+            psychiatrists is passionately committed to enhancing the mental
+            well-being of individuals across all age groups and stages of life.
           </p>
           <Link href="/about-us">
             <Button className="h-12 w-1/2">Learn More</Button>
@@ -138,7 +137,7 @@ export default function HomePage() {
             variants={leftAnimation}
             initial="hidden"
             animate={inView2 ? "show" : "hidden"}
-            className="flex-1 border-2 border-primary_blue shadow-md shadow-primary_blue"
+            className="flex-1 border border-primary_blue shadow-md shadow-primary_blue"
           >
             <div className="relative h-1/2 w-full">
               <Image
@@ -166,7 +165,7 @@ export default function HomePage() {
             variants={rightAnimation}
             initial="hidden"
             animate={inView2 ? "show" : "hidden"}
-            className="flex-1 border-2 border-primary_blue shadow-md shadow-primary_blue"
+            className="flex-1 border border-primary_blue shadow-md shadow-primary_blue"
           >
             <div className="relative h-1/2 w-full">
               <Image

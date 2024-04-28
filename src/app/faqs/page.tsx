@@ -11,22 +11,25 @@ export default function FAQSPage() {
    };
   return (
     <main className="h-[100vh] w-full">
-      <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
+      <section className="relative flex h-60 w-full items-center justify-center bg-red-700 md:h-80">
         <Image
           src={"/hold-hands.jpg"}
           fill
           alt="hold-hands"
           className="object-cover"
         />
-        <div className="bg-primary_blue/30 absolute z-10 h-full w-full"></div>
-         <motion.h1
+        <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
+        <motion.h1
           initial="hidden"
           animate="visible"
           variants={variants}
           transition={{ duration: 0.5 }}
-          className="z-20 text-6xl font-black text-white">FAQs</motion.h1>
+          className="z-20 text-6xl font-black text-white"
+        >
+          FAQs
+        </motion.h1>
       </section>
-      <section className="bg-primary_blue h-auto w-full p-4 text-white">
+      <section className="h-auto w-full bg-primary_blue p-4 text-white">
         <p className="my-3 text-center text-3xl font-bold md:text-4xl">
           Frequently Asked Questions
         </p>

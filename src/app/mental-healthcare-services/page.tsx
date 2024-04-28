@@ -11,20 +11,21 @@ export default function MentalHealthcareServicesPage() {
    };
   return (
     <main className="h-auto w-full">
-      <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
+      <section className="relative flex h-60 w-full items-center justify-center bg-red-700 md:h-80">
         <Image
           src={"/hold-hands.jpg"}
           fill
           alt="hold-hands"
           className="object-cover"
         />
-        <div className="bg-primary_blue/30 absolute z-10 h-full w-full"></div>
-         <motion.h1
+        <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
+        <motion.h1
           initial="hidden"
           animate="visible"
           variants={variants}
           transition={{ duration: 0.5 }}
-          className="z-20 text-6xl font-black text-white">
+          className="z-20 text-6xl font-black text-white"
+        >
           Mental Healthcare Services
         </motion.h1>
       </section>
@@ -37,8 +38,8 @@ export default function MentalHealthcareServicesPage() {
           <hr className="h-1 w-32 bg-primary" />
         </div>
         <p>
-          At Stop Shop Care Home, we are committed to providing comprehensive mental
-          healthcare services to meet the diverse needs of our patients
+          At Stop Shop Care Home, we are committed to providing comprehensive
+          mental healthcare services to meet the diverse needs of our patients
           throughout New York. In addition to our core services of Nursing Home
           Psychiatry and Telehealth Psychiatry, we offer the following
           specialized services:

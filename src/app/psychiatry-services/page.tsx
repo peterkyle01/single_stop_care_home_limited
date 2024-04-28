@@ -16,7 +16,7 @@ export default function PsychiatryServicesPage() {
   };
   return (
     <main className="h-auto w-full">
-      <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
+      <section className="relative flex h-60 w-full items-center justify-center bg-red-700 md:h-80">
         <Image
           src={"/hold-hands.jpg"}
           fill
@@ -57,9 +57,9 @@ export default function PsychiatryServicesPage() {
             <hr className="h-1 w-32 bg-primary" />
           </motion.div>
           <p>
-            At Stop Shop Care Home, we offer comprehensive psychiatry services to
-            meet the diverse mental health needs of individuals throughout New
-            York. Our experienced team of psychiatrists is committed to
+            At Stop Shop Care Home, we offer comprehensive psychiatry services
+            to meet the diverse mental health needs of individuals throughout
+            New York. Our experienced team of psychiatrists is committed to
             providing high-quality care and improving the well-being of our
             patients. Choose from the following services:
           </p>

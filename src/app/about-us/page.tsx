@@ -20,7 +20,7 @@ export default function AboutPage() {
   };
   return (
     <main className="h-auto w-full">
-      <section className="relative flex h-80 w-full items-center justify-center">
+      <section className="relative flex h-60 w-full items-center justify-center md:h-80">
         <Image
           src={"/hold-hands.jpg"}
           fill

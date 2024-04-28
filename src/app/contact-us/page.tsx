@@ -16,7 +16,7 @@ export default function ContactUsPage() {
   };
   return (
     <main className="h-auto w-full">
-      <section className="relative flex h-80 w-full items-center justify-center bg-red-700">
+      <section className="relative flex h-60 w-full items-center justify-center bg-red-700 md:h-80">
         <Image
           src={"/hold-hands.jpg"}
           fill
