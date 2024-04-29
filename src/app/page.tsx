@@ -26,20 +26,20 @@ export default function HomePage() {
           className="object-cover"
         />
         <div className="absolute z-10 h-full w-full bg-black/40"></div>
-        <div className="z-20 w-3/4 md:w-1/2 text-white p-2 mt-16">
-          <h1 className="text-4xl font-black md:text-6xl text-center">
+        <div className="z-20 mt-16 w-3/4 p-2 text-white md:w-1/2">
+          <h1 className="text-center text-4xl font-black md:text-6xl">
             Welcome to <br /> Single Stop Care Home
           </h1>
-          <h2 className="text-lg font-bold md:text-3xl my-2 text-center">
+          <h2 className="my-2 text-center text-lg font-bold md:text-3xl">
             Creating a Revolution in Parental Healthcare
           </h2>
-          <p className="text-sm tracking-wider md:text-base text-center">
+          <p className="text-center text-sm tracking-wider md:text-base">
             At Single Stop Care Home, we lead the forefront in offering
             exceptional general home care across UK. Our expert team of
             psychiatrists is passionately committed to enhancing the mental
             well-being of individuals across all age groups and stages of life.
           </p>
-          <Link href="/about-us" className="w-full flex justify-center my-4">
+          <Link href="/about-us" className="my-4 flex w-full justify-center">
             <Button className="h-12 w-1/2">Learn More</Button>
           </Link>
         </div>
@@ -99,7 +99,7 @@ export default function HomePage() {
           variants={dropAnimation}
           initial="hidden"
           animate={inView4 ? "show" : "hidden"}
-          className="my-4 text-center text-4xl font-bold md:text-6xl"
+          className="my-4 text-center text-4xl font-bold md:text-6xl text-primary_blue"
         >
           Main Services
         </motion.h1>
@@ -125,7 +125,7 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-1/2 w-full bg-white p-1">
-              <h1 className="text-center font-bold md:my-2 md:text-3xl">
+              <h1 className="text-center font-bold md:my-2 md:text-3xl text-primary_blue">
                 Fostering Wellness with General Psychiatry
               </h1>
               <p className="text-center text-xs text-neutral-600 md:text-xl">
@@ -153,7 +153,7 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-1/2 w-full bg-white p-1">
-              <h1 className="text-center font-bold md:my-2 md:text-3xl">
+              <h1 className="text-center font-bold md:my-2 md:text-3xl text-primary_blue">
                 Medication Management for Good Health
               </h1>
               <p className="text-center text-xs text-neutral-600 md:text-xl">
@@ -172,7 +172,7 @@ export default function HomePage() {
           variants={dropAnimation}
           initial="hidden"
           animate={inView5 ? "show" : "hidden"}
-          className="text-center text-4xl font-bold md:text-6xl"
+          className="text-center text-4xl font-bold md:text-6xl text-primary_blue"
         >
           Additional Services
         </motion.h1>
@@ -198,7 +198,7 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-[30rem] w-full place-content-center gap-4 p-2">
-              <h1 className="text-3xl font-bold md:my-2">
+              <h1 className="text-3xl font-bold md:my-2 text-primary_blue">
                 On-Site Nursing Home Psychiatry
               </h1>
               <p className="text-neutral-600">
@@ -227,7 +227,7 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-[30rem] w-full place-content-center gap-4 p-2">
-              <h1 className="text-3xl font-bold md:my-2">
+              <h1 className="text-3xl font-bold md:my-2 text-primary_blue">
                 Telehealth Psychiatry Services
               </h1>
               <p className="text-neutral-600">
@@ -279,7 +279,7 @@ export default function HomePage() {
             <i className="place-self-center text-6xl text-primary md:text-8xl">
               <IoIosTimer />
             </i>
-            <h1 className="text-3xl font-bold text-black">
+            <h1 className="text-3xl font-bold text-primary_blue">
               Convenience at Its Best
             </h1>
             <p className="text-neutral-600">
@@ -292,7 +292,7 @@ export default function HomePage() {
             <i className="place-self-center text-6xl text-primary md:text-8xl">
               <IoIosTimer />
             </i>
-            <h1 className="text-3xl font-bold text-black">
+            <h1 className="text-3xl font-bold text-primary_blue">
               Flexibility that Fits Your Lifestyle
             </h1>
             <p className="text-neutral-600">
@@ -305,7 +305,7 @@ export default function HomePage() {
             <i className="place-self-center text-6xl text-primary md:text-8xl">
               <FaWheelchair />
             </i>
-            <h1 className="text-3xl font-bold text-black">Accessible Care</h1>
+            <h1 className="text-3xl font-bold text-primary_blue">Accessible Care</h1>
             <p className="text-neutral-600">
               Whether you&apos;re in a nursing home or prefer remote
               consultations, our telehealth services ensure that high-quality

@@ -13,7 +13,7 @@ import { TiThMenuOutline } from "react-icons/ti";
 import Link from "next/link";
 import Image from "next/image";
 import { MdOutlineMailOutline } from "react-icons/md";
-import { FaPhone } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
 
 export default function Menu() {
   return (

@@ -41,7 +41,7 @@ export default function PsychiatryServicesPage() {
             variants={dropAnimation}
             initial="hidden"
             animate={inView1 ? "show" : "hidden"}
-            className="text-4xl font-bold text-neutral-800 md:text-6xl"
+            className="text-4xl font-bold text-primary_blue md:text-6xl"
           >
             Our Services
           </motion.h1>
@@ -89,7 +89,7 @@ export default function PsychiatryServicesPage() {
           animate={inView2 ? "show" : "hidden"}
           className="grid h-auto w-full p-4 md:h-full"
         >
-          <h1 className="text-4xl font-bold text-neutral-800 md:text-6xl">
+          <h1 className="text-4xl font-bold text-primary_blue md:text-6xl">
             Nursing Home Psychiatry{" "}
           </h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
@@ -116,7 +116,7 @@ export default function PsychiatryServicesPage() {
           animate={inView3 ? "show" : "hidden"}
           className="grid h-auto w-full p-4 md:h-full"
         >
-          <h1 className="text-4xl font-bold text-neutral-800 md:text-6xl">
+          <h1 className="text-4xl font-bold text-primary_blue md:text-6xl">
             Telehealth Psychiatry{" "}
           </h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
@@ -167,7 +167,7 @@ export default function PsychiatryServicesPage() {
             <i className="text-6xl text-primary md:text-8xl place-self-center">
               <IoIosTimer />
             </i>
-            <h1 className="text-3xl font-bold text-black">
+            <h1 className="text-3xl font-bold text-primary_blue">
               Convenience at Its Best
             </h1>
             <p className="text-neutral-600">
@@ -180,7 +180,7 @@ export default function PsychiatryServicesPage() {
             <i className="text-6xl text-primary md:text-8xl place-self-center">
               <IoIosTimer />
             </i>
-            <h1 className="text-3xl font-bold text-black">
+            <h1 className="text-3xl font-bold text-primary_blue">
               Flexibility that Fits Your Lifestyle
             </h1>
             <p className="text-neutral-600">
@@ -193,7 +193,7 @@ export default function PsychiatryServicesPage() {
             <i className="text-6xl text-primary md:text-8xl place-self-center">
               <FaWheelchair />
             </i>
-            <h1 className="text-3xl font-bold text-black">Accessible Care</h1>
+            <h1 className="text-3xl font-bold text-primary_blue">Accessible Care</h1>
             <p className="text-neutral-600">
               Whether you&apos;re in a nursing home or prefer remote
               consultations, our telehealth services ensure that high-quality

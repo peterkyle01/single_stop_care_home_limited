@@ -91,13 +91,13 @@ export default function AboutPage() {
         </motion.div>
       </section>
       <section className="h-[35rem] w-full p-10">
-        <div className="flex h-full w-full flex-col items-center justify-center gap-3 border-2 border-primary_blue p-4 shadow-md shadow-primary_blue">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-3 border border-primary_blue p-4 shadow-md shadow-primary_blue">
           <motion.h1
             ref={ref2}
             variants={dropAnimation}
             initial="hidden"
             animate={inView2 ? "show" : "hidden"}
-            className="text-4xl font-bold text-neutral-800 md:text-6xl"
+            className="text-4xl font-bold text-primary_blue md:text-6xl"
           >
             Our Approach
           </motion.h1>
@@ -131,7 +131,7 @@ export default function AboutPage() {
             variants={dropAnimation}
             initial="hidden"
             animate={inView3 ? "show" : "hidden"}
-            className="text-4xl font-bold text-neutral-800 md:text-6xl"
+            className="text-4xl font-bold text-primary_blue md:text-6xl"
           >
             Why Single Stop Care Home?
           </motion.h1>
@@ -161,24 +161,24 @@ export default function AboutPage() {
       <section className="h-auto w-full bg-white p-4 text-white">
         <div className="flex h-auto w-full flex-col gap-4 p-2 md:h-60 md:flex-row">
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-black">Personal Care:</h1>
-            <p className="text-neutral-600">
+            <h1 className="text-3xl font-bold text-primary_blue">Personal Care:</h1>
+            <p className="text-neutral-600 text-center">
               Assisting with daily tasks such as bathing, dressing, and
               grooming.
             </p>
           </div>
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-black">Companionship:</h1>
-            <p className="text-neutral-600">
+            <h1 className="text-3xl font-bold text-primary_blue">Companionship:</h1>
+            <p className="text-neutral-600 text-center">
               Providing companionship and emotional support to combat loneliness
               and isolation.
             </p>
           </div>
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-black">
+            <h1 className="text-3xl font-bold text-primary_blue">
               Medication Management:
             </h1>
-            <p className="text-neutral-600">
+            <p className="text-neutral-600 text-center">
               Ensuring medications are taken as prescribed, including assistance
               with administration if required.
             </p>
@@ -186,22 +186,22 @@ export default function AboutPage() {
         </div>
         <div className="flex h-auto w-full flex-col gap-4 p-2 md:h-60 md:flex-row">
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-black">Meal Preparation:</h1>
-            <p className="text-neutral-600">
+            <h1 className="text-3xl font-bold text-primary_blue">Meal Preparation:</h1>
+            <p className="text-neutral-600 text-center">
               Planning and preparing nutritious meals according to dietary
               requirements and preferences.
             </p>
           </div>
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-black">Domestic Support:</h1>
-            <p className="text-neutral-600">
+            <h1 className="text-3xl font-bold text-primary_blue">Domestic Support:</h1>
+            <p className="text-neutral-600 text-center">
               Assisting with light housekeeping tasks to maintain a clean and
               tidy living environment.
             </p>
           </div>
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-black">Respite Care:</h1>
-            <p className="text-neutral-600">
+            <h1 className="text-3xl font-bold text-primary_blue">Respite Care:</h1>
+            <p className="text-neutral-600 text-center">
               Providing temporary care and support to give primary caregivers a
               well-deserved break.
             </p>
@@ -232,7 +232,7 @@ export default function AboutPage() {
           animate={inView4 ? "show" : "hidden"}
           className="grid h-auto w-full p-4 md:h-full"
         >
-          <h1 className="text-center text-4xl font-bold text-neutral-800 md:text-6xl">
+          <h1 className="text-center text-4xl font-bold text-primary_blue md:text-6xl">
             Our Mission
           </h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
@@ -267,7 +267,7 @@ export default function AboutPage() {
           animate={inView5 ? "show" : "hidden"}
           className="grid h-auto w-full p-4 md:h-full"
         >
-          <h1 className="text-center text-4xl font-bold text-neutral-800 md:text-6xl">
+          <h1 className="text-center text-4xl font-bold text-primary_blue md:text-6xl">
             Our Vision
           </h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
@@ -330,7 +330,7 @@ export default function AboutPage() {
           animate={inView6 ? "show" : "hidden"}
           className="grid h-auto w-full p-4 md:h-full"
         >
-          <h1 className="text-center text-4xl font-bold text-neutral-800 md:text-6xl">
+          <h1 className="text-center text-4xl font-bold text-primary_blue md:text-6xl">
             Our Objectives
           </h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
@@ -368,7 +368,7 @@ export default function AboutPage() {
           animate={inView7 ? "show" : "hidden"}
           className="grid h-auto w-full p-4 md:h-full"
         >
-          <h1 className="text-center text-4xl font-bold text-neutral-800 md:text-6xl">
+          <h1 className="text-center text-4xl font-bold text-primary_blue md:text-6xl">
             Our Values
           </h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">

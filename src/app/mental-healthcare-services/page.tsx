@@ -30,8 +30,8 @@ export default function MentalHealthcareServicesPage() {
         </motion.h1>
       </section>
       <section className="h-auto w-full p-4">
-        <p className="text-lg">Our Services</p>
-        <h1 className="text-4xl">Mental Healthcare Services</h1>
+        <p className="text-2xl">Our Services</p>
+        <h1 className="text-4xl md:text-6xl text-primary_blue">Mental Healthcare Services</h1>
         <div className="flex h-20 w-full items-center justify-center gap-5">
           <hr className="h-1 w-32 bg-primary" />
           <FaHeartbeat className="text-4xl" color="0369a1" />
@@ -45,7 +45,7 @@ export default function MentalHealthcareServicesPage() {
           specialized services:
         </p>
         <div className="my-6 h-auto w-full">
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl font-bold text-primary_blue">
             1. Child and Adolescent Psychiatry
           </h1>
           <p className="my-2">
@@ -59,7 +59,7 @@ export default function MentalHealthcareServicesPage() {
           </p>
         </div>
         <div className="my-6 h-auto w-full">
-          <h1 className="text-3xl font-bold">2. Mood and Anxiety Disorders</h1>
+          <h1 className="text-3xl font-bold text-primary_blue">2. Mood and Anxiety Disorders</h1>
           <p className="my-2">
             We offer specialized services for individuals struggling with mood
             disorders, such as depression and bipolar disorder, as well as
@@ -71,7 +71,7 @@ export default function MentalHealthcareServicesPage() {
           </p>
         </div>
         <div className="my-6 h-auto w-full">
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl font-bold text-primary_blue">
             3. Substance Abuse and Addiction{" "}
           </h1>
           <p className="my-2">
@@ -85,7 +85,7 @@ export default function MentalHealthcareServicesPage() {
           </p>
         </div>
         <div className="my-6 h-auto w-full">
-          <h1 className="text-3xl font-bold">4. Geriatric Psychiatry </h1>
+          <h1 className="text-3xl font-bold text-primary_blue">4. Geriatric Psychiatry </h1>
           <p className="my-2">
             In addition to our nursing home psychiatry services, we offer
             specialized care for elderly individuals who may not reside in
@@ -97,7 +97,7 @@ export default function MentalHealthcareServicesPage() {
           </p>
         </div>
         <div className="my-6 h-auto w-full">
-          <h1 className="text-3xl font-bold">5. PTSD and Trauma </h1>
+          <h1 className="text-3xl font-bold text-primary_blue">5. PTSD and Trauma </h1>
           <p className="my-2">
             Our team has expertise in working with individuals who have
             experienced trauma or are struggling with post-traumatic stress
