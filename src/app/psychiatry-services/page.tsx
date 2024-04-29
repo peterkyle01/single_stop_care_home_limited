@@ -4,20 +4,16 @@ import { FaWheelchair, FaHeartbeat } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { dropAnimation, leftAnimation, rightAnimation } from "@/lib/utils";
+import { dropAnimation, leftAnimation, rightAnimation, upAnimation } from "@/lib/utils";
 
 export default function PsychiatryServicesPage() {
   const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
   const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: true });
-    const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: true });
+  const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: true });
+  const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: true });
+  const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: true });
 
-      const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: true });
-
-  const variants = {
-    hidden: { opacity: 0, x: "-100vw" },
-    visible: { opacity: 1, x: 0 },
-  };
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-60 w-full items-center justify-center bg-red-700 md:h-80">
@@ -29,10 +25,10 @@ export default function PsychiatryServicesPage() {
         />
         <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
         <motion.h1
+          ref={ref6}
+          variants={upAnimation}
           initial="hidden"
-          animate="visible"
-          variants={variants}
-          transition={{ duration: 0.5 }}
+          animate={inView6 ? "show" : "hidden"}
           className="z-20 text-6xl font-black text-white"
         >
           Psychiatry Services
@@ -168,7 +164,7 @@ export default function PsychiatryServicesPage() {
         </div>
         <div className="flex h-auto w-full flex-col gap-4 p-2 md:h-80 md:flex-row">
           <div className="grid h-full w-full bg-white p-2">
-            <i className="text-6xl text-primary md:text-8xl place-self-center">
+            <i className="place-self-center text-6xl text-primary md:text-8xl">
               <IoIosTimer />
             </i>
             <h1 className="text-3xl font-bold text-primary_blue">
@@ -181,7 +177,7 @@ export default function PsychiatryServicesPage() {
             </p>
           </div>
           <div className="grid h-full w-full bg-white p-2">
-            <i className="text-6xl text-primary md:text-8xl place-self-center">
+            <i className="place-self-center text-6xl text-primary md:text-8xl">
               <IoIosTimer />
             </i>
             <h1 className="text-3xl font-bold text-primary_blue">
@@ -194,10 +190,12 @@ export default function PsychiatryServicesPage() {
             </p>
           </div>
           <div className="grid h-full w-full bg-white p-2">
-            <i className="text-6xl text-primary md:text-8xl place-self-center">
+            <i className="place-self-center text-6xl text-primary md:text-8xl">
               <FaWheelchair />
             </i>
-            <h1 className="text-3xl font-bold text-primary_blue">Accessible Care</h1>
+            <h1 className="text-3xl font-bold text-primary_blue">
+              Accessible Care
+            </h1>
             <p className="text-neutral-600">
               Whether you&apos;re in a nursing home or prefer remote
               consultations, our telehealth services ensure that high-quality

@@ -2,13 +2,13 @@
 import Image from "next/image";
 import { FaHeartbeat } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { upAnimation } from "@/lib/utils";
 
 
 export default function MentalHealthcareServicesPage() {
-   const variants = {
-     hidden: { opacity: 0, x: "-100vw" },
-     visible: { opacity: 1, x: 0 },
-   };
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-60 w-full items-center justify-center bg-red-700 md:h-80">
@@ -20,18 +20,20 @@ export default function MentalHealthcareServicesPage() {
         />
         <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
         <motion.h1
+          ref={ref}
+          variants={upAnimation}
           initial="hidden"
-          animate="visible"
-          variants={variants}
-          transition={{ duration: 0.5 }}
+          animate={inView ? "show" : "hidden"}
           className="z-20 text-6xl font-black text-white"
         >
           Mental Healthcare Services
         </motion.h1>
       </section>
       <section className="h-auto w-full p-4">
-        <p className="text-2xl">Our Services</p>
-        <h1 className="text-4xl md:text-6xl text-primary_blue">Mental Healthcare Services</h1>
+        <p className="text-2xl text-primary font-bold">Our Services</p>
+        <h1 className="text-4xl text-primary_blue md:text-6xl">
+          Mental Healthcare Services
+        </h1>
         <div className="flex h-20 w-full items-center justify-center gap-5">
           <hr className="h-1 w-32 bg-primary" />
           <FaHeartbeat className="text-4xl" color="0369a1" />
@@ -59,7 +61,9 @@ export default function MentalHealthcareServicesPage() {
           </p>
         </div>
         <div className="my-6 h-auto w-full">
-          <h1 className="text-3xl font-bold text-primary_blue">2. Mood and Anxiety Disorders</h1>
+          <h1 className="text-3xl font-bold text-primary_blue">
+            2. Mood and Anxiety Disorders
+          </h1>
           <p className="my-2">
             We offer specialized services for individuals struggling with mood
             disorders, such as depression and bipolar disorder, as well as
@@ -85,7 +89,9 @@ export default function MentalHealthcareServicesPage() {
           </p>
         </div>
         <div className="my-6 h-auto w-full">
-          <h1 className="text-3xl font-bold text-primary_blue">4. Geriatric Psychiatry </h1>
+          <h1 className="text-3xl font-bold text-primary_blue">
+            4. Geriatric Psychiatry{" "}
+          </h1>
           <p className="my-2">
             In addition to our nursing home psychiatry services, we offer
             specialized care for elderly individuals who may not reside in
@@ -97,7 +103,9 @@ export default function MentalHealthcareServicesPage() {
           </p>
         </div>
         <div className="my-6 h-auto w-full">
-          <h1 className="text-3xl font-bold text-primary_blue">5. PTSD and Trauma </h1>
+          <h1 className="text-3xl font-bold text-primary_blue">
+            5. PTSD and Trauma{" "}
+          </h1>
           <p className="my-2">
             Our team has expertise in working with individuals who have
             experienced trauma or are struggling with post-traumatic stress

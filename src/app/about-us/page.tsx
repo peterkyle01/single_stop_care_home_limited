@@ -3,7 +3,12 @@ import Image from "next/image";
 import { FaHeartbeat } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { dropAnimation, leftAnimation, rightAnimation } from "@/lib/utils";
+import {
+  dropAnimation,
+  leftAnimation,
+  rightAnimation,
+  upAnimation,
+} from "@/lib/utils";
 
 export default function AboutPage() {
   const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
@@ -18,11 +23,8 @@ export default function AboutPage() {
   const { ref: ref10, inView: inView10 } = useInView({ triggerOnce: true });
   const { ref: ref11, inView: inView11 } = useInView({ triggerOnce: true });
   const { ref: ref12, inView: inView12 } = useInView({ triggerOnce: true });
+  const { ref: ref13, inView: inView13 } = useInView({ triggerOnce: true });
 
-  const variants = {
-    hidden: { opacity: 0, x: "-100vw" },
-    visible: { opacity: 1, x: 0 },
-  };
   return (
     <main className="h-auto w-full">
       <section className="relative flex h-60 w-full items-center justify-center md:h-80">
@@ -35,10 +37,10 @@ export default function AboutPage() {
         <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
 
         <motion.h1
+          ref={ref13}
+          variants={upAnimation}
           initial="hidden"
-          animate="visible"
-          variants={variants}
-          transition={{ duration: 0.5 }}
+          animate={inView13 ? "show" : "hidden"}
           className="z-20 text-6xl font-black text-white"
         >
           About
