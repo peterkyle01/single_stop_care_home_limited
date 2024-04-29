@@ -15,6 +15,8 @@ export default function HomePage() {
   const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: true });
   const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: true });
   const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: true });
+  const { ref: ref7, inView: inView7 } = useInView({ triggerOnce: true });
+  const { ref: ref8, inView: inView8 } = useInView({ triggerOnce: true });
 
   return (
     <main className="h-auto w-full">
@@ -46,10 +48,10 @@ export default function HomePage() {
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <motion.div
-          ref={ref1}
+          ref={ref7}
           variants={leftAnimation}
           initial="hidden"
-          animate={inView1 ? "show" : "hidden"}
+          animate={inView7 ? "show" : "hidden"}
           className="relative h-80 w-full p-4 md:h-full"
         >
           <div className="relative h-full w-full">
@@ -99,7 +101,7 @@ export default function HomePage() {
           variants={dropAnimation}
           initial="hidden"
           animate={inView4 ? "show" : "hidden"}
-          className="my-4 text-center text-4xl font-bold md:text-6xl text-primary_blue"
+          className="my-4 text-center text-4xl font-bold text-primary_blue md:text-6xl"
         >
           Main Services
         </motion.h1>
@@ -125,7 +127,7 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-1/2 w-full bg-white p-1">
-              <h1 className="text-center font-bold md:my-2 md:text-3xl text-primary_blue">
+              <h1 className="text-center font-bold text-primary_blue md:my-2 md:text-3xl">
                 Fostering Wellness with General Psychiatry
               </h1>
               <p className="text-center text-xs text-neutral-600 md:text-xl">
@@ -153,7 +155,7 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-1/2 w-full bg-white p-1">
-              <h1 className="text-center font-bold md:my-2 md:text-3xl text-primary_blue">
+              <h1 className="text-center font-bold text-primary_blue md:my-2 md:text-3xl">
                 Medication Management for Good Health
               </h1>
               <p className="text-center text-xs text-neutral-600 md:text-xl">
@@ -172,7 +174,7 @@ export default function HomePage() {
           variants={dropAnimation}
           initial="hidden"
           animate={inView5 ? "show" : "hidden"}
-          className="text-center text-4xl font-bold md:text-6xl text-primary_blue"
+          className="text-center text-4xl font-bold text-primary_blue md:text-6xl"
         >
           Additional Services
         </motion.h1>
@@ -183,10 +185,10 @@ export default function HomePage() {
         </div>
         <div className="flex h-auto w-full flex-col md:flex-row md:gap-8">
           <motion.div
-            ref={ref3}
+            ref={ref8}
             variants={leftAnimation}
             initial="hidden"
-            animate={inView3 ? "show" : "hidden"}
+            animate={inView8 ? "show" : "hidden"}
             className="flex h-[35rem] w-full flex-col"
           >
             <div className="relative h-full w-full">
@@ -198,7 +200,7 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-[30rem] w-full place-content-center gap-4 p-2">
-              <h1 className="text-3xl font-bold md:my-2 text-primary_blue">
+              <h1 className="text-3xl font-bold text-primary_blue md:my-2">
                 On-Site Nursing Home Psychiatry
               </h1>
               <p className="text-neutral-600">
@@ -227,7 +229,7 @@ export default function HomePage() {
               />
             </div>
             <div className="grid h-[30rem] w-full place-content-center gap-4 p-2">
-              <h1 className="text-3xl font-bold md:my-2 text-primary_blue">
+              <h1 className="text-3xl font-bold text-primary_blue md:my-2">
                 Telehealth Psychiatry Services
               </h1>
               <p className="text-neutral-600">
@@ -305,7 +307,9 @@ export default function HomePage() {
             <i className="place-self-center text-6xl text-primary md:text-8xl">
               <FaWheelchair />
             </i>
-            <h1 className="text-3xl font-bold text-primary_blue">Accessible Care</h1>
+            <h1 className="text-3xl font-bold text-primary_blue">
+              Accessible Care
+            </h1>
             <p className="text-neutral-600">
               Whether you&apos;re in a nursing home or prefer remote
               consultations, our telehealth services ensure that high-quality

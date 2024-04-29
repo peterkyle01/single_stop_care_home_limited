@@ -13,6 +13,11 @@ export default function AboutPage() {
   const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: true });
   const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: true });
   const { ref: ref7, inView: inView7 } = useInView({ triggerOnce: true });
+  const { ref: ref8, inView: inView8 } = useInView({ triggerOnce: true });
+  const { ref: ref9, inView: inView9 } = useInView({ triggerOnce: true });
+  const { ref: ref10, inView: inView10 } = useInView({ triggerOnce: true });
+  const { ref: ref11, inView: inView11 } = useInView({ triggerOnce: true });
+  const { ref: ref12, inView: inView12 } = useInView({ triggerOnce: true });
 
   const variants = {
     hidden: { opacity: 0, x: "-100vw" },
@@ -42,10 +47,10 @@ export default function AboutPage() {
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <div className="relative h-80 w-full p-4 md:h-full">
           <motion.div
-            ref={ref1}
+            ref={ref8}
             variants={leftAnimation}
             initial="hidden"
-            animate={inView1 ? "show" : "hidden"}
+            animate={inView8 ? "show" : "hidden"}
             className="relative h-full w-full"
           >
             <Image
@@ -161,15 +166,19 @@ export default function AboutPage() {
       <section className="h-auto w-full bg-white p-4 text-white">
         <div className="flex h-auto w-full flex-col gap-4 p-2 md:h-60 md:flex-row">
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-primary_blue">Personal Care:</h1>
-            <p className="text-neutral-600 text-center">
+            <h1 className="text-3xl font-bold text-primary_blue">
+              Personal Care:
+            </h1>
+            <p className="text-center text-neutral-600">
               Assisting with daily tasks such as bathing, dressing, and
               grooming.
             </p>
           </div>
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-primary_blue">Companionship:</h1>
-            <p className="text-neutral-600 text-center">
+            <h1 className="text-3xl font-bold text-primary_blue">
+              Companionship:
+            </h1>
+            <p className="text-center text-neutral-600">
               Providing companionship and emotional support to combat loneliness
               and isolation.
             </p>
@@ -178,7 +187,7 @@ export default function AboutPage() {
             <h1 className="text-3xl font-bold text-primary_blue">
               Medication Management:
             </h1>
-            <p className="text-neutral-600 text-center">
+            <p className="text-center text-neutral-600">
               Ensuring medications are taken as prescribed, including assistance
               with administration if required.
             </p>
@@ -186,22 +195,28 @@ export default function AboutPage() {
         </div>
         <div className="flex h-auto w-full flex-col gap-4 p-2 md:h-60 md:flex-row">
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-primary_blue">Meal Preparation:</h1>
-            <p className="text-neutral-600 text-center">
+            <h1 className="text-3xl font-bold text-primary_blue">
+              Meal Preparation:
+            </h1>
+            <p className="text-center text-neutral-600">
               Planning and preparing nutritious meals according to dietary
               requirements and preferences.
             </p>
           </div>
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-primary_blue">Domestic Support:</h1>
-            <p className="text-neutral-600 text-center">
+            <h1 className="text-3xl font-bold text-primary_blue">
+              Domestic Support:
+            </h1>
+            <p className="text-center text-neutral-600">
               Assisting with light housekeeping tasks to maintain a clean and
               tidy living environment.
             </p>
           </div>
           <div className="flex h-full w-full flex-col items-center justify-center gap-4 border-2 bg-white p-2 shadow-md">
-            <h1 className="text-3xl font-bold text-primary_blue">Respite Care:</h1>
-            <p className="text-neutral-600 text-center">
+            <h1 className="text-3xl font-bold text-primary_blue">
+              Respite Care:
+            </h1>
+            <p className="text-center text-neutral-600">
               Providing temporary care and support to give primary caregivers a
               well-deserved break.
             </p>
@@ -210,10 +225,10 @@ export default function AboutPage() {
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <motion.div
-          ref={ref4}
+          ref={ref9}
           variants={leftAnimation}
           initial="hidden"
-          animate={inView4 ? "show" : "hidden"}
+          animate={inView9 ? "show" : "hidden"}
           className="relative h-80 w-full p-4 md:h-full"
         >
           <div className="relative h-full w-full">
@@ -291,10 +306,10 @@ export default function AboutPage() {
         </motion.div>
         <div className="relative h-80 w-full p-4 md:h-full">
           <motion.div
-            ref={ref5}
+            ref={ref10}
             variants={rightAnimation}
             initial="hidden"
-            animate={inView5 ? "show" : "hidden"}
+            animate={inView10 ? "show" : "hidden"}
             className="relative h-full w-full"
           >
             <Image
@@ -308,10 +323,10 @@ export default function AboutPage() {
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <motion.div
-          ref={ref6}
+          ref={ref11}
           variants={leftAnimation}
           initial="hidden"
-          animate={inView6 ? "show" : "hidden"}
+          animate={inView11 ? "show" : "hidden"}
           className="relative h-80 w-full p-4 md:h-full"
         >
           <div className="relative h-full w-full">
@@ -362,10 +377,10 @@ export default function AboutPage() {
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <motion.div
-          ref={ref7}
+          ref={ref12}
           variants={leftAnimation}
           initial="hidden"
-          animate={inView7 ? "show" : "hidden"}
+          animate={inView12 ? "show" : "hidden"}
           className="grid h-auto w-full p-4 md:h-full"
         >
           <h1 className="text-center text-4xl font-bold text-primary_blue md:text-6xl">

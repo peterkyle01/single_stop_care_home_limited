@@ -10,7 +10,9 @@ import { leftAnimation, rightAnimation } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function ContactUsPage() {
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
+    const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
+
   const variants = {
     hidden: { opacity: 0, x: "-100vw" },
     visible: { opacity: 1, x: 0 },
@@ -37,10 +39,10 @@ export default function ContactUsPage() {
       </section>
       <section className="flex h-auto w-full flex-col md:h-[45rem] md:flex-row">
         <motion.div
-          ref={ref}
+          ref={ref1}
           variants={leftAnimation}
           initial="hidden"
-          animate={inView ? "show" : "hidden"}
+          animate={inView1 ? "show" : "hidden"}
           className="h-full w-full p-4 md:w-1/4"
         >
           <h1 className="text-4xl font-bold text-primary_blue">Contact Us</h1>
@@ -74,10 +76,10 @@ export default function ContactUsPage() {
           </p>
         </motion.div>
         <motion.div
-          ref={ref}
+          ref={ref2}
           variants={rightAnimation}
           initial="hidden"
-          animate={inView ? "show" : "hidden"}
+          animate={inView2 ? "show" : "hidden"}
           className="grid h-full w-full gap-3 p-4 md:w-3/4"
         >
           <div className="grid grow p-5 shadow-primary_blue md:p-20">

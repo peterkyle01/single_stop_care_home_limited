@@ -10,6 +10,10 @@ export default function PsychiatryServicesPage() {
   const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
   const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: true });
+    const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: true });
+
+      const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: true });
+
   const variants = {
     hidden: { opacity: 0, x: "-100vw" },
     visible: { opacity: 1, x: 0 },
@@ -67,10 +71,10 @@ export default function PsychiatryServicesPage() {
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <motion.div
-          ref={ref2}
+          ref={ref4}
           variants={leftAnimation}
           initial="hidden"
-          animate={inView2 ? "show" : "hidden"}
+          animate={inView4 ? "show" : "hidden"}
           className="relative h-80 w-full p-4 md:h-full"
         >
           <div className="relative h-full w-full">
@@ -110,10 +114,10 @@ export default function PsychiatryServicesPage() {
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <motion.div
-          ref={ref3}
+          ref={ref5}
           variants={leftAnimation}
           initial="hidden"
-          animate={inView3 ? "show" : "hidden"}
+          animate={inView5 ? "show" : "hidden"}
           className="grid h-auto w-full p-4 md:h-full"
         >
           <h1 className="text-4xl font-bold text-primary_blue md:text-6xl">
