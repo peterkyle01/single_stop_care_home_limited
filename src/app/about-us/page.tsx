@@ -49,7 +49,7 @@ export default function AboutPage() {
             className="relative h-full w-full"
           >
             <Image
-              src={"/hold-hands.jpg"}
+              src={"/image3.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"
@@ -218,7 +218,7 @@ export default function AboutPage() {
         >
           <div className="relative h-full w-full">
             <Image
-              src={"/hold-hands.jpg"}
+              src={"/image2.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"
@@ -298,7 +298,7 @@ export default function AboutPage() {
             className="relative h-full w-full"
           >
             <Image
-              src={"/hold-hands.jpg"}
+              src={"/image5.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"
@@ -316,7 +316,7 @@ export default function AboutPage() {
         >
           <div className="relative h-full w-full">
             <Image
-              src={"/hold-hands.jpg"}
+              src={"/image1.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"
@@ -404,7 +404,7 @@ export default function AboutPage() {
         >
           <div className="relative h-full w-full">
             <Image
-              src={"/hold-hands.jpg"}
+              src={"/image6.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"

@@ -75,7 +75,7 @@ export default function PsychiatryServicesPage() {
         >
           <div className="relative h-full w-full">
             <Image
-              src={"/hold-hands.jpg"}
+              src={"/image4.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"
@@ -145,7 +145,7 @@ export default function PsychiatryServicesPage() {
         >
           <div className="relative h-full w-full">
             <Image
-              src={"/hold-hands.jpg"}
+              src={"/image3.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"
