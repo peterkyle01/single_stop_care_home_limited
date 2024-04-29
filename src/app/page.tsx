@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { HeroCarousel } from "@/components/shared/carousel";
 import { FaHeartbeat, FaWheelchair } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
 import Link from "next/link";
@@ -17,55 +16,33 @@ export default function HomePage() {
   const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: true });
   const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: true });
 
-  const variants = {
-    hidden: { opacity: 0, x: "-100vw" },
-    visible: { opacity: 1, x: 0 },
-  };
   return (
     <main className="h-auto w-full">
-      <section className="relative flex h-60 w-full items-center justify-center bg-red-700 md:h-80">
+      <section className="relative flex h-[35rem] w-full justify-center">
         <Image
           src={"/hold-hands.jpg"}
           fill
           alt="hold-hands"
           className="object-cover"
         />
-        <div className="absolute z-10 h-full w-full bg-primary_blue/30"></div>
-        <motion.h1
-          initial="hidden"
-          animate="visible"
-          variants={variants}
-          transition={{ duration: 0.5 }}
-          className="z-20 text-6xl font-black text-white"
-        >
-          Home
-        </motion.h1>
-      </section>
-      <section className="flex h-auto w-full flex-col bg-primary_blue text-white md:h-[35rem] md:flex-row-reverse">
-        <HeroCarousel />
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={variants}
-          transition={{ duration: 0.5 }}
-          className="grid h-[25rem] w-full p-4 md:h-[35rem]"
-        >
-          <h1 className="text-4xl font-black md:text-6xl">
+        <div className="absolute z-10 h-full w-full bg-black/40"></div>
+        <div className="z-20 w-3/4 md:w-1/2 text-white p-2 mt-16">
+          <h1 className="text-4xl font-black md:text-6xl text-center">
             Welcome to <br /> Single Stop Care Home
           </h1>
-          <h2 className="text-lg font-bold md:text-3xl">
+          <h2 className="text-lg font-bold md:text-3xl my-2 text-center">
             Creating a Revolution in Parental Healthcare
           </h2>
-          <p className="text-sm tracking-wider md:text-base">
+          <p className="text-sm tracking-wider md:text-base text-center">
             At Single Stop Care Home, we lead the forefront in offering
             exceptional general home care across UK. Our expert team of
             psychiatrists is passionately committed to enhancing the mental
             well-being of individuals across all age groups and stages of life.
           </p>
-          <Link href="/about-us">
+          <Link href="/about-us" className="w-full flex justify-center my-4">
             <Button className="h-12 w-1/2">Learn More</Button>
           </Link>
-        </motion.div>
+        </div>
       </section>
       <section className="flex h-auto w-full flex-col py-4 md:h-[30rem] md:flex-row">
         <motion.div
