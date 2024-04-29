@@ -54,7 +54,7 @@ export default function HomePage() {
         >
           <div className="relative h-full w-full">
             <Image
-              src={"/image1.jpg"}
+              src={"/image3.jpg"}
               fill
               alt="hold-hands"
               className="object-cover"
@@ -146,7 +146,7 @@ export default function HomePage() {
           >
             <div className="relative h-1/2 w-full">
               <Image
-                src={"/image3.jpg"}
+                src={"/image1.jpg"}
                 fill
                 alt="hold-hands"
                 className="object-cover"
