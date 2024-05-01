@@ -29,7 +29,7 @@ export default function AboutPage() {
     <main className="h-auto w-full">
       <section className="relative flex h-60 w-full items-center justify-center md:h-80">
         <Image
-          src={"/hold-hands.jpg"}
+          src={"/hero.webp"}
           fill
           alt="hold-hands"
           className="object-cover"
@@ -235,7 +235,7 @@ export default function AboutPage() {
         >
           <div className="relative h-full w-full">
             <Image
-              src={"/image2.jpg"}
+              src={"/image2.webp"}
               fill
               alt="hold-hands"
               className="object-cover"

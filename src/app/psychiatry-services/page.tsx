@@ -18,7 +18,7 @@ export default function PsychiatryServicesPage() {
     <main className="h-auto w-full">
       <section className="relative flex h-60 w-full items-center justify-center bg-red-700 md:h-80">
         <Image
-          src={"/hold-hands.jpg"}
+          src={"/hero.webp"}
           fill
           alt="hold-hands"
           className="object-cover"

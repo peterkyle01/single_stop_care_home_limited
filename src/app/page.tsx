@@ -22,7 +22,7 @@ export default function HomePage() {
     <main className="h-auto w-full">
       <section className="relative flex h-[35rem] w-full justify-center">
         <Image
-          src={"/hold-hands.jpg"}
+          src={"/hero.webp"}
           fill
           alt="hold-hands"
           className="object-cover"
@@ -120,7 +120,7 @@ export default function HomePage() {
           >
             <div className="relative h-1/2 w-full">
               <Image
-                src={"/image2.jpg"}
+                src={"/image2.webp"}
                 fill
                 alt="hold-hands"
                 className="object-cover"
