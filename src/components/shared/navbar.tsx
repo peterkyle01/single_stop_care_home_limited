@@ -45,14 +45,14 @@ export default function Navbar() {
               About Us
             </li>
           </Link>
-          <Link href={"/psychiatry-services"}>
+          <Link href={"/services"}>
             <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
-              Psychiatry Services
+              Services
             </li>
           </Link>
-          <Link href={"/mental-healthcare-services"}>
+          <Link href={"/staff-supply"}>
             <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
-              Mental Healthcare Services
+              Staff Supply
             </li>
           </Link>
           <Link href={"/faqs"}>

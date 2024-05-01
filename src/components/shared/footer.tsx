@@ -19,26 +19,32 @@ export default function Footer() {
           <Separator className="w-1/2" />
           <ul className="grow">
             <Link href={"/"}>
-              <li className="text-md hover:text-pm_blue font-bold">Home</li>
-            </Link>
-            <Link href={"/about-us"}>
-              <li className="text-md hover:text-pm_blue font-bold">About Us</li>
-            </Link>
-            <Link href={"/psychiatry-services"}>
-              <li className="text-md hover:text-pm_blue font-bold">
-                Psychiatry Services
+              <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
+                Home
               </li>
             </Link>
-            <Link href={"/mental-healthcare-services"}>
-              <li className="text-md hover:text-pm_blue font-bold">
-                Mental Healthcare Services
+            <Link href={"/about-us"}>
+              <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
+                About Us
+              </li>
+            </Link>
+            <Link href={"/services"}>
+              <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
+                Services
+              </li>
+            </Link>
+            <Link href={"/staff-supply"}>
+              <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
+                Staff Supply
               </li>
             </Link>
             <Link href={"/faqs"}>
-              <li className="text-md hover:text-pm_blue font-bold">FAQs</li>
+              <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
+                FAQs
+              </li>
             </Link>
             <Link href={"/contact-us"}>
-              <li className="text-md hover:text-pm_blue font-bold">
+              <li className="text-md hover:text-pm_blue font-bold hover:text-primary">
                 Contact Us
               </li>
             </Link>

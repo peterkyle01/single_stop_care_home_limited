@@ -81,7 +81,7 @@ export default function HomePage() {
           </div>
 
           <p className="my-2 text-neutral-600">
-            Navigating the labyrinth of mental health can be daunting. But, with
+            Navigating the labyrinth of old age can be daunting. But, with
             Single Stop Care Home, you can expect care that&apos;s not only
             professional but also peace — a warm and friendly approach that goes
             above and beyond traditional clinical interactions.
@@ -128,14 +128,14 @@ export default function HomePage() {
             </div>
             <div className="grid h-1/2 w-full bg-white p-1">
               <h1 className="text-center font-bold text-primary_blue md:my-2 md:text-3xl">
-                Fostering Wellness with General Psychiatry
+                Fostering Wellness with General Care
               </h1>
               <p className="text-center text-xs text-neutral-600 md:text-xl">
                 Our principal focus lies in delivering top-tier general
-                psychiatry services. Our experienced psychiatrists are adept at
-                diagnosing, treating, and managing various mental health
+                care services. Our experienced team are adept at
+                diagnosing, treating, and managing various old age
                 disorders, offering therapeutic sessions that cater to your
-                specific needs.
+                specific needs as one gets old.
               </p>
             </div>
           </motion.div>
@@ -201,10 +201,10 @@ export default function HomePage() {
             </div>
             <div className="grid h-[30rem] w-full place-content-center gap-4 p-2">
               <h1 className="text-3xl font-bold text-primary_blue md:my-2">
-                On-Site Nursing Home Psychiatry
+                On-Site Nursing Home Care
               </h1>
               <p className="text-neutral-600">
-                Our on-site nursing home psychiatry service stems from our
+                Our on-site nursing home care service stems from our
                 commitment to providing comprehensive and personalized mental
                 healthcare. Our expert psychiatrists collaborate closely with
                 facility staff to ensure the well-being of seniors, providing
@@ -230,10 +230,10 @@ export default function HomePage() {
             </div>
             <div className="grid h-[30rem] w-full place-content-center gap-4 p-2">
               <h1 className="text-3xl font-bold text-primary_blue md:my-2">
-                Telehealth Psychiatry Services
+                Telehealth Care Services
               </h1>
               <p className="text-neutral-600">
-                Our telehealth psychiatry services demonstrate our dedication to
+                Our telehealth care services demonstrate our dedication to
                 making mental healthcare accessible, confidential, and
                 convenient. This service includes detailed virtual evaluations,
                 development of tailored treatment plans, strategic medication

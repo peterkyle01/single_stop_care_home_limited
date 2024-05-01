@@ -4,9 +4,14 @@ import { FaWheelchair, FaHeartbeat } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { dropAnimation, leftAnimation, rightAnimation, upAnimation } from "@/lib/utils";
+import {
+  dropAnimation,
+  leftAnimation,
+  rightAnimation,
+  upAnimation,
+} from "@/lib/utils";
 
-export default function PsychiatryServicesPage() {
+export default function Services() {
   const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
   const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
   const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: true });
@@ -31,7 +36,7 @@ export default function PsychiatryServicesPage() {
           animate={inView6 ? "show" : "hidden"}
           className="z-20 text-6xl font-black text-white"
         >
-          Psychiatry Services
+          Services
         </motion.h1>
       </section>
       <section className="h-[30rem] w-full p-10">
@@ -90,7 +95,7 @@ export default function PsychiatryServicesPage() {
           className="grid h-auto w-full p-4 md:h-full"
         >
           <h1 className="text-4xl font-bold text-primary_blue md:text-6xl">
-            Nursing Home Psychiatry{" "}
+            Emergency Medical Alert Systems
           </h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
             <hr className="h-1 w-32 bg-primary" />{" "}
@@ -99,12 +104,15 @@ export default function PsychiatryServicesPage() {
           </div>
 
           <p className="my-2 text-neutral-600">
-            Our specialized nursing home psychiatry services focus on enhancing
-            the mental health and quality of life for seniors residing in
-            nursing homes. We provide on-site evaluations, personalized
-            treatment plans, medication management, and therapy sessions. Our
-            psychiatrists collaborate closely with nursing home staff to ensure
-            integrated and holistic care for each individual.
+            Emergency medical alert systems are essential tools for the elderly,
+            providing a lifeline in case of emergencies such as falls or medical
+            crises. These systems are accessible through wearable devices like
+            pendants or wristbands, which are often water-resistant and can be
+            worn at all times, ensuring help is just a button press away.
+            Monitored 24/7 by professionals, these systems can dispatch
+            emergency services when activated. Some are equipped with advanced
+            features like automatic fall detection, which can call for help
+            without manual intervention if a fall is detected. 
           </p>
         </motion.div>
       </section>
@@ -117,7 +125,7 @@ export default function PsychiatryServicesPage() {
           className="grid h-auto w-full p-4 md:h-full"
         >
           <h1 className="text-4xl font-bold text-primary_blue md:text-6xl">
-            Telehealth Psychiatry{" "}
+            Personal Care Assistance
           </h1>
           <div className="flex h-20 w-full items-center justify-center gap-5">
             <hr className="h-1 w-32 bg-primary" />{" "}
@@ -126,14 +134,15 @@ export default function PsychiatryServicesPage() {
           </div>
 
           <p className="my-2 text-neutral-600">
-            Our convenient telehealth psychiatry services bring professional
-            mental healthcare directly to you. Through secure and confidential
-            video conferencing, you can access our team of expert psychiatrists
-            from the comfort of your own home. We offer a wide range of
-            services, including initial assessments, medication management,
-            therapy sessions, and ongoing support. Our telehealth platform
-            ensures that individuals across New York can receive the care they
-            need, regardless of their location.
+            Personal Care Assistance (PCA) for the elderly is a comprehensive
+            service that caters to the individual needs of seniors, helping them
+            with various activities of daily living to maintain their
+            independence and dignity. This service encompasses a range of tasks,
+            including assistance with bathing, dressing, grooming, and other
+            personal hygiene needs, which can become challenging for some
+            seniors as they age. PCA also extends to help with mobility, aiding
+            individuals in moving around their home safely, and may involve
+            transferring them from bed to wheelchair or assisting with walking.
           </p>
         </motion.div>
         <motion.div
@@ -153,9 +162,77 @@ export default function PsychiatryServicesPage() {
           </div>
         </motion.div>
       </section>
+      <section className="h-auto w-full p-4">
+        <p>
+          At Stop Shop Care Home, we are committed to providing comprehensive
+          mental healthcare services to meet the diverse needs of our patients
+          throughout New York. In addition to our core services of Nursing Home
+          Psychiatry and Telehealth Psychiatry, we offer the following
+          specialized services:
+        </p>
+        <div className="my-6 h-auto w-full">
+          <h1 className="text-3xl font-bold text-primary_blue">
+            1. Home Health Care Services
+          </h1>
+          <p className="my-2">
+            These services encompass various aspects of health care for older
+            adults living at home. They include medication management, wound
+            care, medical equipment support, physical therapy, in-home nursing
+            care for recovery from surgery or illness, and managing chronic
+            conditions such as diabetes. Providers can come for a few hours each
+            day or stay 24/7.
+          </p>
+        </div>
+        <div className="my-6 h-auto w-full">
+          <h1 className="text-3xl font-bold text-primary_blue">
+            2. Help with Everyday Activities
+          </h1>
+          <p className="my-2">
+            Elderly individuals often need assistance with daily chores and
+            tasks. Services in this category cover light housekeeping (cleaning
+            and laundry), meal preparation or delivery, assistance with eating,
+            personal care (bathing, dressing, walking), shopping, errands, and
+            companionship. Social interaction is crucial for their well-being.
+          </p>
+        </div>
+        <div className="my-6 h-auto w-full">
+          <h1 className="text-3xl font-bold text-primary_blue">
+            3. Assisted Living Services
+          </h1>
+          <p className="my-2">
+            Assisted living facilities offer a range of services, including one
+            to three meals a day, medication monitoring, personal care
+            (dressing, bathing), housekeeping, laundry, 24-hour emergency care,
+            and social and recreational activities. These services aim to
+            enhance the quality of life for seniors.
+          </p>
+        </div>
+        <div className="my-6 h-auto w-full">
+          <h1 className="text-3xl font-bold text-primary_blue">
+            4. Nutrition, Food, and Meal Services
+          </h1>
+          <p className="my-2">
+            Ensuring proper nutrition is essential for seniors. Some home care
+            services provide meal planning, preparation, and delivery to meet
+            dietary needs. These services contribute to overall health and
+            well-being.
+          </p>
+        </div>
+        <div className="my-6 h-auto w-full">
+          <h1 className="text-3xl font-bold text-primary_blue">
+            5. Transportation Services
+          </h1>
+          <p className="my-2">
+            Many elderly individuals require transportation for medical
+            appointments, grocery shopping, or social outings. Some home care
+            providers offer transportation assistance, ensuring seniors can
+            access essential services and maintain social connections.
+          </p>
+        </div>
+      </section>
       <section className="h-auto w-full bg-primary_blue p-4 text-white">
         <p className="my-3 text-center text-3xl font-bold md:text-4xl">
-          Benefits of Telehealth Psychiatry
+          Benefits of A Care Home
         </p>
         <div className="flex h-20 w-full items-center justify-center gap-5">
           <hr className="h-1 w-32 bg-white" />

@@ -39,19 +39,13 @@ export default function Menu() {
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Link href={"/psychiatry-services"}>
-                  <li className="text-md font-bold text-white">
-                    {" "}
-                    Psychiatry Services
-                  </li>
+                <Link href={"/services"}>
+                  <li className="text-md font-bold text-white">Services</li>
                 </Link>
               </SheetClose>
               <SheetClose asChild>
-                <Link href={"/mental-healthcare-services"}>
-                  <li className="text-md font-bold text-white">
-                    {" "}
-                    Mental Healthcare Services
-                  </li>
+                <Link href={"/staff-supply"}>
+                  <li className="text-md font-bold text-white">Staff Supply</li>
                 </Link>
               </SheetClose>
               <SheetClose asChild>
@@ -72,7 +66,7 @@ export default function Menu() {
         </SheetFooter>
         <Link
           href={"tel:469-36PHYZI (77924)"}
-          className="flex my-4 flex-1 items-center justify-center text-white"
+          className="my-4 flex flex-1 items-center justify-center text-white"
         >
           <FaPhone className="mr-3" />
           tel:469-36PHYZI (77924)
