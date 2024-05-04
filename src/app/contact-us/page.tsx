@@ -55,7 +55,7 @@ export default function ContactUsPage() {
           <h1 className="my-3 text-2xl text-primary_blue">
             Contact Information:
           </h1>
-          <p>Phone: 469-36PHYZI (77924)</p>
+          <p>Phone: 020 7092 9996</p>
           <p>Email: singlestropcarehome.co.uk</p>
           <h1 className="my-3 text-2xl text-primary_blue">Office Address:</h1>
           <p>Single Top Carehome Ltd 75 White Chaple Road</p>

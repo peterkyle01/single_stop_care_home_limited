@@ -22,10 +22,10 @@ export default function Navbar() {
           </Link>
         </div>
         <Link
-          href={"tel:469-36PHYZI (77924)"}
+          href={"tel:020 7092 9996"}
           className="flex flex-1 items-center justify-center text-white"
         >
-          <FaPhone className="mr-3" /> 469-36PHYZI (77924)
+          <FaPhone className="mr-3" /> 020 7092 9996
         </Link>
       </div>
       <div className="flex h-20 w-full bg-white">
