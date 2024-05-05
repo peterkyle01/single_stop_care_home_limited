@@ -65,11 +65,11 @@ export default function Menu() {
           <Image src={"/logo.jpg"} width={300} height={200} alt="logo" />
         </SheetFooter>
         <Link
-          href={"tel:469-36PHYZI (77924)"}
+          href={"tel:020 7092 9996"}
           className="my-4 flex flex-1 items-center justify-center text-white"
         >
           <FaPhone className="mr-3" />
-          tel:469-36PHYZI (77924)
+          tel:020 7092 9996
         </Link>
         <Link
           className="flex flex-1 items-center justify-center text-white"
